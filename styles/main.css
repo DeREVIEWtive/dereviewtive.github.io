@@ -1,0 +1,18 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Sans-serif;
+}
+
+nav {
+    text-decoration: none;
+    background: red;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+
+}
+
