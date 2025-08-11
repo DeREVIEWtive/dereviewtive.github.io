@@ -22,7 +22,7 @@ nav ul {
     font-size: 20px;
     display: flex;
     list-style: none;
-    gap: 22px;
+    gap: 60px;
     margin: auto;
     margin-right: 5px;
 }
@@ -37,19 +37,27 @@ nav ul {
 
 #lessons {
     margin: 0;
-    border: 5px solid black;
+    border: 3px solid black;
     text-align: center;
     border-radius: 8px;
-    padding: 5px;
+    padding: 30px;
+    padding-top: 10px;
 }
 
-#lessons a {
+#lesson-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#lessons a:not(#lesson-header) {
     display: block;
+    padding: 5px;
+    font-size: 18px;
 }
 
 #info {
     background: rgb(181, 181, 183);
-    border: 5px solid black;
+    border: 3px solid black;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -60,8 +68,9 @@ nav ul {
 #info > div{
     background: rgb(181, 181, 183);
     text-align: center;
-    padding: 5px;
-    border-bottom: 5px solid black;
+    font-size: 20px;
+    padding: 15px;
+    border-bottom: 3px solid black;
 }
 
 main{
