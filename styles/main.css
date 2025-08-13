@@ -8,6 +8,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Sans-serif;
+    overflow: clip;
 }
 
 nav {
@@ -15,16 +16,17 @@ nav {
     background: rgb(156, 156, 156);
     display: flex;
     padding: 10px 15px;
-
+    
 }
 
 nav ul {
     font-size: 20px;
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 20px 60px;
     margin: auto;
     margin-right: 5px;
+    flex-wrap: wrap;
 }
 
 #content{
@@ -36,6 +38,7 @@ nav ul {
 }
 
 #lessons {
+    /* display: none; */
     margin: 0;
     border: 3px solid black;
     text-align: center;
@@ -53,14 +56,19 @@ nav ul {
     display: block;
     padding: 5px;
     font-size: 18px;
+    text-decoration: none;
+    color: rgb(100, 72, 240);
 }
+
+#lessons a:not(#lesson-header):hover {
+    color: #3e6cea;
+}
+
 
 #info {
     background: rgb(181, 181, 183);
     border: 3px solid black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    width: calc(100% - 185px);
     border-radius: 8px;
     overflow: clip;
 }
@@ -76,4 +84,5 @@ nav ul {
 main{
     background: rgb(214, 214, 214);
     height: 100%;
+    overflow-wrap: break-word;
 }
