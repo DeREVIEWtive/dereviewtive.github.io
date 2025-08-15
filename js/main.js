@@ -2,7 +2,7 @@ window.onload = async () => {
     const URLSearch = new URLSearchParams(window.location.search);
     const lesson = decodeURIComponent(URLSearch.get("lesson"));
 
-    const lessonRequest = await fetch(`/lessons/${lesson}`);
+    const lessonRequest = await fetch(`/lessons/${lesson}.md`);
     const lessonData = await lessonRequest.text();
 
     const breakIndex = lessonData.indexOf("\n") + 2;
