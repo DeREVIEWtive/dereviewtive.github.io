@@ -1,2 +1,1 @@
-RELATED RATES
-
+Related Rates

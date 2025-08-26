@@ -1,3 +1,3 @@
-KEY CONCEPTS
+Key Concepts
 
 #

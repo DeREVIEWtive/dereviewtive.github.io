@@ -1,2 +1,2 @@
-CHAIN RULE
+Chain Rule
 

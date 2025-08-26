@@ -1,2 +1,2 @@
-RULES OF DIFFERENTIATION
+Rules of Differentiation
 

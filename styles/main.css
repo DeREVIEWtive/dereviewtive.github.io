@@ -16,7 +16,7 @@ nav {
     background: rgb(156, 156, 156);
     display: flex;
     padding: 10px 15px;
-    display: none;
+    /* display: none; */
 }
 
 nav ul {

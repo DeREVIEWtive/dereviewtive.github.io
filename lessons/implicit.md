@@ -1,3 +1,3 @@
- IMPLICIT DIFFERENTIATION
+Implicit Differentiation
 
  
