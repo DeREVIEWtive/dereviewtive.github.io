@@ -35,6 +35,10 @@ nav a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 32px
+}
+
 #content{
     display: flex;
     background: rgb(181, 181, 183);
