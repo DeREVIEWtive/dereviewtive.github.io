@@ -12,3 +12,4 @@ window.onload = async () => {
     header.textContent = headerText;
     main.innerHTML = marked.parse(content);
 };
+
