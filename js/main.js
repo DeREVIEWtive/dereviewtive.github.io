@@ -7,18 +7,18 @@ window.onload = async () => {
 
     let contentRequest = null;
     
-    if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}`);
+    if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}.md`);
     else
     {
         window.history.replaceState({ }, "", `/${page ?? ""}`);
-        contentRequest = await fetch(`/pages/${page ?? "index"}`);
+        contentRequest = await fetch(`/pages/${page ?? "index"}.md`);
     }
 
     const contentData = await contentRequest.text();
 
     const breakIndex = contentData.indexOf("\n") + 2;
     const headerText = contentData.slice(0, breakIndex);
-    const content = contentData.slice(breakIndex + 1);
+    const content = contentData.slice(breakIndex);
 
     header.textContent = headerText;
     main.innerHTML = marked.parse(content);
