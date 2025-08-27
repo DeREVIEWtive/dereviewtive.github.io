@@ -13,7 +13,6 @@ window.onload = async () => {
         window.history.replaceState({ }, "", `/${page ?? ""}`);
         contentRequest = await fetch(`/pages/${page ?? "index"}.md`);
     }
-    
 
     const contentData = await contentRequest.text();
 
