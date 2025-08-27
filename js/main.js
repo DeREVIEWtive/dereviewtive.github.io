@@ -1,13 +1,25 @@
 window.onload = async () => {
     const URLSearch = new URLSearchParams(window.location.search);
-    const lesson = decodeURIComponent(URLSearch.get("lesson"));
+    let page = URLSearch.get("page");
+    if (page != null) page = decodeURIComponent(page);
+    let lesson = URLSearch.get("lesson");
+    if (lesson != null) lesson = decodeURIComponent(lesson);
 
-    const lessonRequest = await fetch(`/lessons/${lesson}.md`);
-    const lessonData = await lessonRequest.text();
+    let contentRequest = null;
+    
+    if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}.md`);
+    else
+    {
+        window.history.replaceState({ }, "", `/${page ?? ""}`);
+        contentRequest = await fetch(`/pages/${page ?? "index"}.md`);
+    }
+    
 
-    const breakIndex = lessonData.indexOf("\n") + 2;
-    const headerText = lessonData.slice(0, breakIndex);
-    const content = lessonData.slice(breakIndex + 1);
+    const contentData = await contentRequest.text();
+
+    const breakIndex = contentData.indexOf("\n") + 2;
+    const headerText = contentData.slice(0, breakIndex);
+    const content = contentData.slice(breakIndex + 1);
 
     header.textContent = headerText;
     main.innerHTML = marked.parse(content);
