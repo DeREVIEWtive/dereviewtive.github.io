@@ -1,3 +1,3 @@
 Implicit Differentiation
 
- 
+ # Implicit Differentiation

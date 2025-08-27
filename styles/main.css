@@ -19,6 +19,7 @@ nav {
     /* display: none; */
 }
 
+
 nav ul {
     font-size: 20px;
     display: flex;
@@ -55,11 +56,10 @@ nav a {
     text-align: center;
     width: auto !important;
 }
-
 #lessons a:not(#lesson-header) {
     display: block;
     white-space: nowrap;
-    padding: 5px;
+    padding: 18px;
     font-size: 18px;
     text-decoration: none;
     color: rgb(100, 72, 240);
