@@ -7,11 +7,11 @@ window.onload = async () => {
 
     let contentRequest = null;
     
-    if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}.md`);
+    if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}`);
     else
     {
         window.history.replaceState({ }, "", `/${page ?? ""}`);
-        contentRequest = await fetch(`/pages/${page ?? "index"}.md`);
+        contentRequest = await fetch(`/pages/${page ?? "index"}`);
     }
 
     const contentData = await contentRequest.text();
