@@ -16,6 +16,16 @@ body {
     background: rgb(181, 181, 183);
 }
 
+a {
+    text-decoration: none;
+    color: rgb(100, 72, 240);
+}
+
+a:hover:not(nav a) {
+    color: #3e6cea;
+    text-decoration: underline;
+}
+
 nav {
     text-decoration: none;
     background: rgb(156, 156, 156);
@@ -65,16 +75,13 @@ nav a {
     width: auto !important;
 }
 
-#lessons a:not(#lesson-header) {
+#lessons .main a {
     display: block;
     white-space: nowrap;
     font-size: 18px;
-    text-decoration: none;
-    color: rgb(100, 72, 240);
-}
-
-#lessons a:not(#lesson-header):hover {
-    color: #3e6cea;
+    height: 10px;
+    position: relative;
+    top: -20px;
 }
 
 
@@ -102,16 +109,25 @@ nav a {
 /* Main content format */
 
 
-p {
+#main p {
     margin: 0px;
     padding-left: 4px;
 }
 
-.main h1 {
+#main h1 {
     margin-bottom: 0px;
 }
 
 h2{
     margin: 0px;
     padding-left: 4px;
+}
+
+#main ul,
+#main ol {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    padding-left: 30px;
+    /* padding-top: 0px; */
+    /* height: 10px; */
 }
