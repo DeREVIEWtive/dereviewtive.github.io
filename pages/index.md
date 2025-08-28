@@ -19,4 +19,4 @@ Figure 1
 
 Figure 2
 
-[LOL](https://dereviewtive.github.io/)
+[I am a Hyperlink](https://dereviewtive.github.io/)
