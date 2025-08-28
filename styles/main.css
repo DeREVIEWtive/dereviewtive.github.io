@@ -1,3 +1,7 @@
+* {
+    scrollbar-color : rgb(181, 181, 183) rgb(214, 214, 214);
+}
+
 html,body {
     height: 100%;
 }
@@ -64,7 +68,6 @@ nav a {
 #lessons a:not(#lesson-header) {
     display: block;
     white-space: nowrap;
-    padding: 10x;
     font-size: 18px;
     text-decoration: none;
     color: rgb(100, 72, 240);
@@ -93,6 +96,8 @@ nav a {
     overflow-y: auto;
     overflow-x: clip;
 }
+
+
 
 /* Main content format */
 
