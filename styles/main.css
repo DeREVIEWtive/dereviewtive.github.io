@@ -9,6 +9,7 @@ body {
     padding: 0px;
     font-family: Arial, Sans-serif;
     overflow: clip;
+    background: rgb(181, 181, 183);
 }
 
 nav {
@@ -37,8 +38,9 @@ nav a {
 
 #content{
     display: flex;
-    background: rgb(181, 181, 183);
-    height: 100%;
+    position: relative;
+    /* height: calc(100% - 26px); */
+    height: calc(100% - 110px);
     padding: 10px;
     gap: 10px;
 }
@@ -46,20 +48,23 @@ nav a {
 #content > div {
     background: rgb(181, 181, 183);
     border: 3px solid black;
-    width: calc(100% - 185px);
+    width: 100%;
     border-radius: 8px;
     overflow: clip;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #lessons {
     text-align: center;
     width: auto !important;
 }
+
 #lessons a:not(#lesson-header) {
     display: block;
     white-space: nowrap;
-    padding: 18px;
+    padding: 10x;
     font-size: 18px;
     text-decoration: none;
     color: rgb(100, 72, 240);
@@ -68,6 +73,7 @@ nav a {
 #lessons a:not(#lesson-header):hover {
     color: #3e6cea;
 }
+
 
 .header {
     background: rgb(181, 181, 183);
@@ -79,8 +85,28 @@ nav a {
 
 .main {
     background: rgb(214, 214, 214);
+    position: relative;
     height: 100%;
     overflow-wrap: break-word;
-    padding: 10px;
-    overflow-y: clip;
+    padding: 8px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    overflow-x: clip;
+}
+
+/* Main content format */
+
+
+p {
+    margin: 0px;
+    padding-left: 4px;
+}
+
+.main h1 {
+    margin-bottom: 0px;
+}
+
+h2{
+    margin: 0px;
+    padding-left: 4px;
 }
