@@ -116,6 +116,7 @@ nav a {
 
 #main h1 {
     margin-bottom: 0px;
+    padding: 1px;
 }
 
 h2{
@@ -130,4 +131,9 @@ h2{
     padding-left: 30px;
     /* padding-top: 0px; */
     /* height: 10px; */
+}
+
+mrow,msup {
+font-size: 100px;
+margin: 0px;
 }
