@@ -1,10 +1,20 @@
 ABOUT US
 
-![ABOUT US](https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg)
-![PEOPLE](https://digital.marksense.in/wp-content/uploads/2025/04/about_us_banner.png)
-**Problem Makers** team are lazy students from Laguna, Philippines. They're aiming to help other lazy students worldwide. think yu❤️!
+## Problem Makers
+<p class="about-info">A team of lazy students from Laguna, Philippines. They're aiming to help other lazy students worldwide with an educational website that provides detailed information and a dedicated calculator for derivatives aiming to aid STEM learners with the difficult nature of derivatives under the subject of calculus.
+</p>
+<p class="about-info">Brought to you by;
+Hannah Hsieh M. Cocamas
+Marvin Padua Jr.
+Naz Louie G. Dolar
+Princess Jane P. Dime
+Ronald Kristoffer G. Herico
+</p>
 
-<style>
+
+
+
+<!-- <style>
     img {
         width: 100%;
     }
@@ -25,4 +35,4 @@ ABOUT US
     {
         width: 35%;
     }
-</style>
+</style> -->

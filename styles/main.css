@@ -110,8 +110,9 @@ nav a {
 
 
 #main p {
-    margin: 0px;
+    margin-top: -10px;
     padding-left: 4px;
+    /* text-align: justify; */
 }
 
 #main h1 {
@@ -119,7 +120,11 @@ nav a {
     padding: 1px;
 }
 
-h2{
+h2,
+h3,
+h4,
+h5,
+h6{
     margin: 0px;
     padding-left: 4px;
 }
@@ -133,7 +138,3 @@ h2{
     /* height: 10px; */
 }
 
-mrow,msup {
-font-size: 100px;
-margin: 0px;
-}
