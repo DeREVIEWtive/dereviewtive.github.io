@@ -187,7 +187,7 @@ If the limit doesn’t exist then the derivative doesn’t exist either.
 In this example we have finally seen a function for which the derivative doesn’t exist at a point. This is a fact of life that we’ve got to be aware of. Derivatives will not always exist. Note as well that this doesn’t say anything about whether or not the derivative exists anywhere else. In fact, the derivative of the absolute value function exists at every point except the one we just looked at, <math><mi>x</mi><mo>=</mo><mn>0</mn></math>.
 The preceding discussion leads to the following definition.
 ## Definition 
-function <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable at <math><mi>x</mi><mo>=</mo><mi>a</mi></math> if <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></math> exists and <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable on an interval if the derivative exists for each point in that interval.
+Function <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable at <math><mi>x</mi><mo>=</mo><mi>a</mi></math> if <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></math> exists and <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable on an interval if the derivative exists for each point in that interval.
 
 The next theorem shows us a very nice relationship between functions that are continuous and those that are differentiable.
 ## Theorem
