@@ -149,7 +149,7 @@ Let’s work one more example. This one will be a little different, but it’s g
 ## Example 2
 Determine <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></math> for <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math>.
       <div>
-## Solution
+### Solution
 Since this problem is asking for the derivative at a specific point we’ll go ahead and use that in our work. It will make our life easier and that’s always a good thing.
 So, plug into the definition and simplify.
         <math display="block">
@@ -204,20 +204,10 @@ So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)<
  
 
  
-<!-- 
 <style>
-
-mi {
-    font-size: 18px;
-    margin: 0px;
-
-
-.limit {
-    font-size: 18px;
+mi { 
+  font-size: 18px;
+}
+</style>
 
 
-.underscript {
-    font-size:10px;
-
-
-</style> -->
