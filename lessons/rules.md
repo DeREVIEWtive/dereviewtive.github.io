@@ -3,7 +3,7 @@ Rules of Differentiation
 # Derivative Properties and Formulas
 This section introduces a collection of formulas and properties that will allow us to avoid using the defenition whenever possible to make things easier for us. Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
 ## Properties
-### 1. Sum/Difference Rule
+### Sum/Difference Rule
   <math display="block">
     <msup>
       <mrow>
@@ -40,7 +40,7 @@ This section introduces a collection of formulas and properties that will allow 
 </math>
 In other words, to differentiate a sum or difference all we need to do is differentiate the individual terms and then put them back together with the appropriate signs. Note as well that this property is not limited to two functions.
 
-### 2. Constant Multiple Rule
+### Multiple Rule
 Where <math><mi>c</mi></math> is any number.
 <math display="block">
     <msup>
@@ -66,11 +66,6 @@ Where <math><mi>c</mi></math> is any number.
     <mo stretchy="false">)</mo>
 </math>
 
-In other words, we can “factor” a multiplicative constant out of a derivative if we need to.
-
-Next, let's move on to the “computation” formulas that will allow us to actually compute some derivatives.
-
-## Formulas
 ### Derivative of a Constant Function
 If <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi></math> then <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>.The derivative of a constant is zero.
 ### Power Rule
@@ -107,7 +102,6 @@ Differentiate the following function:
 </math>
 
 ### Solution
-
 In this case we have the sum and difference of four terms, so we will differentiate each of the terms using the first property from above and then put them back together with the proper sign. Also, for each term with a multiplicative constant, remember that all we need to do is “factor” the constant out (using the second property) and then do the derivative.
 
 <math display="block">
@@ -458,8 +452,8 @@ Differentiate the following function:
 </math>
   
 ### Solution
-There isn’t a lot to do here other than to use the quotient rule. Here is the work for this function.
 
+There isn’t a lot to do here other than to use the quotient rule. Here is the work for this function.
 <math display="block">
     <msup>
       <mi>W</mi>
@@ -544,8 +538,8 @@ Differentiate the following function:
 </math>
   
 ### Solution
-Again, not much to do here other than use the quotient rule. Don’t forget to convert the square root into a fractional exponent.
 
+Again, not much to do here other than use the quotient rule. Don’t forget to convert the square root into a fractional exponent.
 <math display="block">
     <msup>
       <mi>h</mi>
@@ -697,6 +691,271 @@ Again, not much to do here other than use the quotient rule. Don’t forget to c
       </msup>
     </mfrac>
 </math>
+
+
+## Chain Rule
+
+Suppose that we have two functions <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and <math><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and they are both differentiable. 
+If we define <math><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>f</mi><mo>∘</mo><mi>g</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> then the derivative of <math><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is,
+<math display="block">
+    <msup>
+      <mi>F</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <msup>
+      <mi>f</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>g</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mi>g</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+  </math>
+If we have <math><mi>y</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></math> and <math><mi>u</mi><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> then the derivative of <math><mi>y</mi></math> is,
+<math display="block">
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>y</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>u</mi>
+      </mrow>
+    </mfrac>
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <mi>u</mi>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+  </math>
+
+### Example 1
+Use the Chain Rule to differentiate <math><mi>R</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><msqrt><mrow><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></mrow></msqrt></math>.
+### Solution
+We can think of this as a composition of two functions:
+<math display="block">
+    <mrow>
+      <mi>f</mi>
+      <mo stretchy="false">(</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <msqrt>
+        <mi>z</mi>
+      </msqrt>
+      <mspace width="2em" />
+      <mi>g</mi>
+      <mo stretchy="false">(</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <mn>5</mn>
+      <mi>z</mi>
+      <mo>−</mo>
+      <mn>8</mn>
+    </mrow>
+</math>
+
+Their derivatives are:
+<math display="block">
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo>′</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>2</mn>
+          <msqrt>
+            <mi>z</mi>
+          </msqrt>
+        </mrow>
+      </mfrac>
+      <mspace width="2em" />
+      <msup>
+        <mi>g</mi>
+        <mo>′</mo>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <mi>z</mi>
+      <mo stretchy="false">)</mo>
+      <mo>=</mo>
+      <mn>5</mn>
+    </mrow>
+</math>
+Using the chain rule, we get:
+<math display="block">
+    <msup>
+      <mi>R</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>z</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <msup>
+      <mi>f</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>g</mi>
+    <mo stretchy="false">(</mo>
+    <mi>z</mi>
+    <mo stretchy="false">)</mo>
+    <mo stretchy="false">)</mo>
+    <msup>
+      <mi>g</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>z</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <msup>
+      <mi>f</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mn>5</mn>
+    <mi>z</mi>
+    <mo>−</mo>
+    <mn>8</mn>
+    <mo stretchy="false">)</mo>
+    <mo>⋅</mo>
+    <mn>5</mn>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mn>2</mn>
+        <msqrt>
+          <mrow>
+            <mn>5</mn>
+            <mi>z</mi>
+            <mo>−</mo>
+            <mn>8</mn>
+          </mrow>
+        </msqrt>
+      </mrow>
+    </mfrac>
+    <mo>⋅</mo>
+    <mn>5</mn>
+    <mo>=</mo>
+    <mfrac>
+      <mn>5</mn>
+      <mrow>
+        <mn>2</mn>
+        <msqrt>
+          <mrow>
+            <mn>5</mn>
+            <mi>z</mi>
+            <mo>−</mo>
+            <mn>8</mn>
+          </mrow>
+        </msqrt>
+      </mrow>
+    </mfrac>
+</math>
+A more intuitive way to remember the chain rule is to identify an "inside function" and an "outside function". Let’s rewrite the function from the example:
+<math display="block">
+    <mi>R</mi>
+    <mo stretchy="false">(</mo>
+    <mi>z</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <msup>
+      <mrow>
+        <mo stretchy="false">(</mo>
+        <mn>5</mn>
+        <mi>z</mi>
+        <mo>−</mo>
+        <mn>8</mn>
+        <mo stretchy="false">)</mo>
+      </mrow>
+      <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+      </mfrac>
+    </msup>
+</math>
+Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></math>, and theoutside function is raising that to the power of <math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>. The derivative is then:(derivative of the outside function, leaving the inside function alone) times(derivative of the inside function).
+
+<math display="block">
+    <msup>
+      <mi>R</mi>
+      <mo>′</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>z</mi>
+    <mo stretchy="false">)</mo>
+    <mo>=</mo>
+    <mrow>
+      <mfrac>
+        <mn>1</mn>
+        <mn>2</mn>
+      </mfrac>
+      <msup>
+        <mrow>
+          <mo stretchy="false">(</mo>
+          <mn>5</mn>
+          <mi>z</mi>
+          <mo>−</mo>
+          <mn>8</mn>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mrow>
+          <mo>−</mo>
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+      </msup>
+    </mrow>
+    <mo>⋅</mo>
+    <mrow>
+      <mo stretchy="false">(</mo>
+      <mn>5</mn>
+      <mo stretchy="false">)</mo>
+    </mrow>
+</math>
+The outside function is always the last operation you would perform when evaluating. For instance, to find <math><mi>R</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></math>, you would first evaluate <math><mn>5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>−</mo><mn>8</mn></math> and then take the square root of the result. The square root is the last operation, making it the outside function.
+
 
 
 <style>
