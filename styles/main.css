@@ -149,9 +149,4 @@ h6 {
 #lessons {
     display: none !important;
 }
-nav {
-    /* display: flex !important;
-    flex: row nowrap !important;
-    white-space: nowrap!important; */
-}
 }

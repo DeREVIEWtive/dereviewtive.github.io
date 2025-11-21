@@ -11,29 +11,3 @@ Naz Louie G. Dolar
 Princess Jane P. Dime
 Ronald Kristoffer G. Herico
 </p>
-
-
-
-
-<!-- <style>
-    img {
-        width: 100%;
-    }
-
-    #main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    #main p {
-        margin: 0 auto;
-        width: 60%;
-    }
-
-    #main > :first-child
-    {
-        width: 35%;
-    }
-</style> -->

@@ -13,35 +13,3 @@ Aside from lessons, a dedicated calculator for derivatives is able and has the o
 }
 
 </style>
-
-
-
-
-
-
-
-
-
-
-<!-- 
-# WELCOME TO HOME
-## HELLO THERE 
-**WELCOME** HOMEEEEEEEEEEEEEE
-*WELCOME* HOMEEEEEEEEEEEEEE
-<u>WELCOME HOMEEEEEEEEEEEEEE</u>
-~~WELCOME HOMEEEEEEEEEEEEEEEEEE~~
-
-**LIST**
-- <3333
-- GGGGGG
-
-Figure 1
-
-
-**LIST**
-1. <3333
-2. GGGGGG
-
-Figure 2
-
-[I am a Hyperlink](https://dereviewtive.github.io/) -->
