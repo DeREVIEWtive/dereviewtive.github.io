@@ -1,9 +1,8 @@
 Trigonometric Functions
 
 # Derivatives of Trigonometric Functions
-With this section we’re going to start looking at the derivatives of functions other than polynomials or roots of polynomials. We’ll start this process off by taking a look at the derivatives of the six trig functions. Two of the derivatives will be derived. The remaining four are left to you and will follow similar proofs for the two given here.
-Before we actually get into the derivatives of the trig functions we need to give a couple of limits that will show up in the derivation of two of the derivatives.
-
+This part is going to be about the derivatives of functions that aren't polynomials or roots of polynomials. We will begin this process by examining the derivatives of the six trigonometric functions. Two of the derivatives will be calculated. The other four are up to you and will adhere to similar proofs for the two provided here.
+Prior to delving into the derivatives of trigonometric functions, we must present a few limits that will appear in the derivation of two specific derivatives
 ## Fact
 <math display="block">
     <munder>
@@ -45,6 +44,7 @@ Before we actually get into the derivatives of the trig functions we need to giv
     <mn>0</mn>
 </math>
 Before proceeding a quick note. Students often ask why we always use radians in a Calculus class. This is the reason why! The proof of the formula involving sine above requires the angles to be in radians. If the angles are in degrees the limit involving sine is not 1 and so the formulas we will derive below would also change. The formulas below would pick up an extra constant that would just get in the way of our work and so we use radians to avoid that. So, remember to always use radians in a Calculus class!
+
 Before we start differentiating trig functions let’s work a quick set of limit problems that this fact now allows us to do.
 
 ## Example 1 (Limits)

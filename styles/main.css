@@ -31,21 +31,25 @@ nav {
     background: rgb(156, 156, 156);
     display: flex;
     padding: 10px 15px;
+    width: 100%;
     /* display: none; */
 }
 
 
-nav ul {
-    font-size: 20px;
+#navitem {
+    width: 100%;
+    padding-right: 20px;
     display: flex;
     list-style: none;
-    gap: 20px 60px;
-    margin: auto;
-    margin-right: 5px;
-    flex-wrap: wrap;
+    font-size: 20px;
+    max-width: 400px;
+    margin-left: auto;
 }
 
+
+
 nav a {
+    margin: auto;
     color: black;
     text-decoration: none;
 }
@@ -54,7 +58,8 @@ nav a {
     display: flex;
     position: relative;
     /* height: calc(100% - 26px); */
-    height: calc(100% - 110px);
+    height: 25%;
+    flex: 1;
     padding: 10px;
     gap: 10px;
 }
@@ -62,12 +67,16 @@ nav a {
 #content > div {
     background: rgb(181, 181, 183);
     border: 3px solid black;
-    width: 100%;
     border-radius: 8px;
     overflow: clip;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+#info {
+    width: 25%;
+    flex: 1;
 }
 
 #lessons {
@@ -138,3 +147,13 @@ h6 {
     /* height: 10px; */
 }
 
+@media only screen and (max-width: 699px) {
+#lessons {
+    display: none !important;
+}
+nav {
+    /* display: flex !important;
+    flex: row nowrap !important;
+    white-space: nowrap!important; */
+}
+}

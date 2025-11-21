@@ -1,7 +1,7 @@
 Rules of Differentiation
 
 # Derivative Properties and Formulas
-This section introduces a collection of formulas and properties that will allow us to avoid using the defenition whenever possible to make things easier for us. Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
+This section introduces a collection of formulas and properties that will allow us to avoid using the definition whenever possible to make things easier for us. Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
 ## Properties
 ### Sum/Difference Rule
   <math display="block">
@@ -83,22 +83,22 @@ Differentiate the following function:
       <mi>x</mi>
       <mo stretchy="false">)</mo>
       <mo>=</mo>
-      <mn>15</mn>
+      <mn>11</mn>
       <msup>
         <mi>x</mi>
-        <mn>100</mn>
+        <mn>10</mn>
       </msup>
       <mo>−</mo>
-      <mn>3</mn>
+      <mn>6</mn>
       <msup>
         <mi>x</mi>
-        <mn>12</mn>
+        <mn>3</mn>
       </msup>
       <mo>+</mo>
-      <mn>5</mn>
+      <mn>10</mn>
       <mi>x</mi>
       <mo>−</mo>
-      <mn>46</mn>
+      <mn>26</mn>
 </math>
 
 ### Solution
@@ -107,19 +107,22 @@ In this case we have the sum and difference of four terms, so we will differenti
 <math display="block">
     <msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
     <mo>=</mo>
-    <mn>15</mn><mo stretchy="false">(</mo><mn>100</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>99</mn></msup>
+    <mn>11</mn><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>9</mn></msup>
     <mo>−</mo>
-    <mn>3</mn><mo stretchy="false">(</mo><mn>12</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>11</mn></msup>
+    <mn>6</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>2</mn></msup>
     <mo>+</mo>
-    <mn>5</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>0</mn></msup>
+    <mn>10</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>0</mn></msup>
     <mo>−</mo>
     <mn>0</mn>
+</math>
+<math display="block"
+    <msup><mi>f</mi><mo>'</mo></msup><mo strechy="false">(</mo><mi>x</mi><mo strechy= "false">)</mo>
     <mo>=</mo>
-    <mn>1500</mn><msup><mi>x</mi><mn>99</mn></msup>
+    <mn>110</mn><msup><mi>x</mi><mn>9</mn></msup>
     <mo>−</mo>
-    <mn>36</mn><msup><mi>x</mi><mn>11</mn></msup>
+    <mn>18</mn><msup><mi>x</mi><mn>2</mn></msup>
     <mo>+</mo>
-    <mn>5</mn>
+    <mn>10</mn>
 </math>
 
 Notice that in the third term the exponent was a one, and so upon subtracting 1 from the original exponent we get a new exponent of zero. Now recall that <math><msup><mi>x</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></math>. Don’t forget to do any basic arithmetic that needs to be done, such as any multiplication and/or division in the coefficients.

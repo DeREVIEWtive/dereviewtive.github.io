@@ -1,11 +1,12 @@
 ABOUT US
 
-## Problem Makers
-<p class="about-info">A team of lazy students from Laguna, Philippines. They're aiming to help other lazy students worldwide with an educational website that provides detailed information and a dedicated calculator for derivatives aiming to aid STEM learners with the difficult nature of derivatives under the subject of calculus.
+# Problem Makers
+<p class="about-info">From Sta. Maria Integrated High School, the team (Problem Makers) are STEM (Science Technlogy Engineering Mathematics) students who made the DeREVIEWtive . Their aim is to help their fellow STEM learners who struggle in calculus, especiallly, grade 11 learners that tackles "Derivatives". 
 </p>
-<p class="about-info">Brought to you by;
+<p class="about-info">Team members:
+
 Hannah Hsieh M. Cocamas
-Marvin Padua Jr.
+Marvin L. Padua Jr.
 Naz Louie G. Dolar
 Princess Jane P. Dime
 Ronald Kristoffer G. Herico
