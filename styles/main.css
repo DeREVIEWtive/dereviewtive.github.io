@@ -16,6 +16,8 @@ body {
     background: rgb(181, 181, 183);
 }
 
+
+
 a {
     text-decoration: none;
     color: rgb(100, 72, 240);
@@ -25,6 +27,20 @@ a:hover:not(nav a) {
     color: #3e6cea;
     text-decoration: underline;
 }
+
+#slidebar {
+    display: flex;
+    margin-left: 4px;
+    margin-right: 12px;
+}
+
+
+#icontext {
+    padding-left: 2px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 
 nav {
     text-decoration: none;
@@ -44,6 +60,9 @@ nav {
     margin-left: auto;
 }
 
+nav h1 {
+    font-size: 25px;
+}
 
 
 nav a {
