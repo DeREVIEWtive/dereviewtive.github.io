@@ -35,65 +35,70 @@ a:hover:not(nav a) {
     color: black;
     margin-left: 11px;
     cursor: pointer;
+    /* position: relative; */
 }
 
 ul.submenu li {
     display: flex;
     align-items: center;
-    padding: 1.5rem;
+    color: rgb(100, 72, 240);
+    padding: 10px;
     list-style: none;
 }
 
 ul.submenu {
     opacity: 0;
-    pointer-events: none;
     position: absolute;
-    top: 50%;
+    top: 60px;
     left: 0;
-    background: rgb(156, 156, 156);
+    background: rgb(181, 181, 183);
+    border: 3px solid black;
     border-radius: 1rem;
     padding: 0;
     margin: 0;
     transition: all .3s ease;
+    transform: translateX(-100%);
     z-index: 1000;
 }
 
 ul.submenu li a {
-    color: white;
+    color: rgb(100, 72, 240) !important;
     width: 100%;
     display: block;
 }
 
-ul.submenu li:hover {
-    background: rgba(255, 255, 255, 0.1);
+ul.submenu .subheader {
+    border-bottom: 3px solid black;
+    padding: 15px;
+    border-radius: .5rem;
+    color: black !important;
 }
 
- #sidebar .submenu li {
-    border: 3px solid black;
-    color: white;
-    padding: 1rem;
-    border-radius: .5rem;
+
+/* ul.submenu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+} */
+
+/* #sidebar .submenu li {
+    color: rgb(100, 72, 240);
+    padding: 10px;
     transition: background .2s ease;
-}
+} */
+
 
 #sidebar:hover .submenu {
     opacity: 1;
-    top: 100%;
-    pointer-events: all;
+    transform: none;
 }
 
-/* 
-#sidebar:hover .sidemenu {
-    opacity: 1;
-    top: 100%;
-    pointer-events: all;
-} */
+
 
 #icon:hover i {
     transform: rotate(90deg);
 }
 
 #icon {
+    display: none;
     font-size: 28px;
     transition: transform .3s ease;
 }
@@ -103,7 +108,7 @@ ul.submenu li:hover {
 }
 
 
-nav {
+nav:not(#sidebar) {
     text-decoration: none;
     background: rgb(156, 156, 156);
     display: flex;
@@ -121,7 +126,7 @@ nav {
     margin-left: auto;
 }
 
-nav h1 {
+nav h1:not(#sidebar) {
     font-size: 28px;
     margin-right: 2px;
 }
@@ -234,5 +239,7 @@ h6 {
 #sidebar {
     display: initial; 
 }
-
+#icon {
+    display: initial;
+}
 }
