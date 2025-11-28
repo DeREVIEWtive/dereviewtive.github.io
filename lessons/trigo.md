@@ -1,7 +1,10 @@
 Trigonometric Functions
 
 # Derivatives of Trigonometric Functions
-This part is going to be about the derivatives of functions that aren't polynomials or roots of polynomials. We will begin this process by examining the derivatives of the six trigonometric functions. Two of the derivatives will be calculated. The other four are up to you and will adhere to similar proofs for the two provided here.
+This part is going to be about the derivatives of functions that aren't polynomials or roots of polynomials. We will begin this process by examining the derivatives of the six trigonometric functions. Two of the derivatives will be calculated. 
+
+The other four are up to you and will adhere to similar proofs for the two provided here.
+
 Prior to delving into the derivatives of trigonometric functions, we must present a few limits that will appear in the derivation of two specific derivatives
 ## Fact
 <math display="block">
@@ -43,7 +46,10 @@ Prior to delving into the derivatives of trigonometric functions, we must presen
     <mo>=</mo>
     <mn>0</mn>
 </math>
-Before proceeding a quick note. Students often ask why we always use radians in a Calculus class. This is the reason why! The proof of the formula involving sine above requires the angles to be in radians. If the angles are in degrees the limit involving sine is not 1 and so the formulas we will derive below would also change. The formulas below would pick up an extra constant that would just get in the way of our work and so we use radians to avoid that. So, remember to always use radians in a Calculus class!
+
+Before proceeding a quick note. Students often ask why we always use radians in a Calculus class. This is the reason why! The proof of the formula involving sine above requires the angles to be in radians. If the angles are in degrees the limit involving sine is not 1 and so the formulas we will derive below would also change. 
+
+The formulas below would pick up an extra constant that would just get in the way of our work and so we use radians to avoid that. So, remember to always use radians in a Calculus class!
 
 Before we start differentiating trig functions let’s work a quick set of limit problems that this fact now allows us to do.
 
@@ -177,7 +183,9 @@ Now, in this case we can’t factor the 6 out of the sine so we’re stuck with 
       </mrow>
     </mfrac>
 </math>
+
 Note that we factored the 6 in the numerator out of the limit. At this point, while it may not look like it, we can use the fact above to finish the limit.
+
 To see that we can use the fact on this limit let’s do a change of variables. A change of
 variables is really just a renaming of portions of the problem to make something look more like something we know how to deal with. They can’t always be done, but sometimes, such as this case, they can simplify the problem. The change of variables here is to let <math><mi>θ</mi><mo>=</mo><mn>6</mn><mi>x</mi></math> and then notice that as <math><mi>x</mi><mo>→</mo><mn>0</mn></math> we also have <math><mi>θ</mi><mo>→</mo><mn>6</mn><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>. When doing a change of variables in a limit we need to change all the <math><mi>x</mi></math>’s into <math><mi>θ</mi></math>’s and that includes the one in the limit.
 Doing the change of variables on this limit gives,

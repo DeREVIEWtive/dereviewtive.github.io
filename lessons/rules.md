@@ -4,7 +4,7 @@ Rules of Differentiation
 This section introduces a collection of formulas and properties that will allow us to avoid using the definition whenever possible to make things easier for us. Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
 ## Properties
 ### Sum/Difference Rule
-  <math display="block">
+<math display="block">
     <msup>
       <mrow>
         <mo stretchy="false">(</mo>

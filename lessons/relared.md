@@ -15,7 +15,25 @@ We know that air is being pumped into the balloon at a rate of 5 cm<sup>3</sup>/
 
 We want to determine the rate at which the radius is changing. Again, rates are derivatives and so it looks like we want to determine,
 
-<math display="block"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mo>?</mo><mspace width="1em" /><mtext>when</mtext><mspace width="1em" /><mi>r</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mi>d</mi><mn>2</mn></mfrac><mo>=</mo><mn>10</mn><mtext> cm</mtext></math>
+<math display="block">
+<msup><mi>r</mi><mo>′</mo></msup>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mo>?</mo><mspace width="1em" />
+<mtext>when</mtext>
+<mspace width="1em" />
+<mi>r</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mfrac><mi>d</mi><mn>2</mn></mfrac>
+<mo>=</mo>
+<mn>10</mn>
+<mtext> cm</mtext>
+</math>
 
 Note that we needed to convert the diameter to a radius.
 Now that we’ve identified what we have been given and what we want to find we need to relate these two quantities to each other. In this case we can relate the volume and the radius with the formula for the volume of a sphere.

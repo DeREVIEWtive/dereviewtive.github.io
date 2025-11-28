@@ -192,6 +192,8 @@ nav a:not(#sidebar) {
     white-space: pre-wrap;
     overflow-y: auto;
     overflow-x: clip;
+    /* overflow-x: scroll; */
+    /* overflow-x: hidden; */
 }
 
 
@@ -239,4 +241,87 @@ h6 {
 #icon {
     display: initial;
 }
+}
+
+/* Calculator Style */
+
+.OperatorMenu{
+    opacity: 0;
+    position: abbsolute;
+    margin: 0;
+    padding: 0;
+    background: rgb(214, 214, 214);
+}
+.TrigoMenu{
+    opacity: 0;
+    position: abbsolute;
+    margin: 0;
+    padding: 0;
+    background: rgb(214, 214, 214);
+}
+.SymbolsMenu {
+    opacity: 0;
+    position: abbsolute;
+    margin: 0;
+    padding: 0;
+    background: rgb(214, 214, 214);
+}
+
+#calculator {
+    background: rgb(181, 181, 183);
+    display: flex;
+    flex-direction: column;
+    border: solid 2.5px rgb(6, 36, 6);
+    width: 30%;
+
+}
+
+
+#calcButtons{
+    padding-bottom: 7px;
+    display: flex;
+    cursor: pointer;
+
+}
+
+
+#calcDisplay{
+    display: flex;
+
+}
+
+/* Calculator Main Buttons */
+
+#Enter,
+#CLR,
+#Operators,
+#Trigo,
+#Symbols,
+#Undo,
+#Redo {
+   margin: auto;
+   background-color: #e1e5f0;
+   border: solid 2px black;
+   font-size: 20px;
+   padding: 10px;
+   position: relative;
+   flex: 1;
+}
+
+
+#Enter:hover,
+#CLR:hover,
+#Operators:hover,
+#Trigo:hover,
+#Symbols:hover,
+#Undo:hover,
+#Redo:hover {
+    background-color: #c4ceea;
+}
+
+/* Calculator Input */
+
+input[type=text] {
+    margin: auto;
+    width: 95%;
 }
