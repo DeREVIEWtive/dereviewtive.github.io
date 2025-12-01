@@ -6,27 +6,28 @@ Calculator
 <div id="calculator">
     <div id="calcDisplay"></div>
          <div id="calcButtons">
-            <button onclick="calculateDerivative()" id="Enter">Enter</button>
-            <button onclick="clearInput()" id="CLR">Clear</button>
-            <button id="Operators">+</button>
-            <button id="Trigo">Trigo</button>
-            <button id="Symbols">√</button>
-            <button onclick="undoInput()" id="Undo">&lt</button>
-            <button onclick="redoInput()" id="Redo">&gt</button>
+            <div id="OperatorMenu">
+            <div id="Operators">+</div>
+            </div>
+            <div id="OperatorMenuItem">
+                <div>+</div>
+                <div>-</div>
+                <div>×</div>
+                <div>÷</div>
+            </div>
+            <div id="Trigo">Trigo</div>
+            <div id="Symbols">√</div>
+            <div onclick="calculate()" id="Enter">Enter</div>
+            <div onclick="clearInput()" id="CLR">Clear</div>
+            <div onclick="undoInput()" id="Undo">&lt</div>
+            <div onclick="redoInput()" id="Redo">&gt</div>
         </div>
-    <input type="text" id="calcInput"></input>
-    <input type="text" id="calcOutput"></input>
+        <input type="text" id="calcInput"></input>
+        <output name="result" for="calcInput" id="calcOutput"></output>
 </div>
 
+
 <!-- Dropdown Menus -->
- <div class="OperatorMenu">
-            <div class="OperatorMenuItem">
-                    <button>+</button>
-                    <button>-</button>
-                    <button>×</button>
-                    <button>÷</button>
-                </div>
-            </div>
 
   
 

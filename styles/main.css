@@ -244,14 +244,85 @@ h6 {
 
 /* Calculator Style */
 
-.OperatorMenu{
+#calculator {
+    background: rgb(181, 181, 183);
+    display: flex;
+    flex-direction: column;
+    border: solid 2.5px black;
+    width: 100%;
+
+}
+
+
+#calcButtons{
+    padding-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+
+#calcDisplay{
+    display: flex;
+
+}
+
+/* Calculator Main Buttons */
+
+#Enter,
+#CLR,
+#Operators,
+#Trigo,
+#Symbols,
+#Undo,
+#Redo {
+   margin: auto;
+   background-color: #a7c9e6;
+   border: solid 2px black;
+   text-align: center;
+   font-size: 20px;
+   padding: 10px;
+   flex: 1;
+}
+
+/* #Operators {
+    width: 
+} */
+
+#Enter:hover,
+#CLR:hover,
+#Operators:hover,
+#Trigo:hover,
+#Symbols:hover,
+#Undo:hover,
+#Redo:hover {
+    background-color: #5f83e7;
+}
+
+/* Calculator Drop Down*/
+
+
+#OperatorMenuItem {
     opacity: 0;
     position: absolute;
+    left: 96px;
+    bottom: 340px;
     margin: 0;
-    padding: 0;
-    background: rgb(214, 214, 214);
+    padding: 0px;
+    background: rgb(181, 181, 183);
     transform: translateX(-100%);
     z-index: 1000;
+
+}
+
+#OperatorMenuItem div {
+    pointer-events: all;
+    display: flex;
+    border: solid 2px black;
+    padding: 5px;
+    /* border-radius: 8px; */
 }
 .TrigoMenu{
     opacity: 0;
@@ -272,87 +343,41 @@ h6 {
     z-index: 1000;
 }
 
-#calculator {
-    background: rgb(181, 181, 183);
-    display: flex;
-    flex-direction: column;
-    border: solid 2.5px black;
-    width: 40%;
-
-}
-
-
-#calcButtons{
-    padding-bottom: 7px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    cursor: pointer;
-
-}
-
-
-#calcDisplay{
-    display: flex;
-
-}
-
-/* Calculator Main Buttons */
-
-/* #Operators:hover .OperatorMenu {
+#OperatorItem:hover {
+    transition: all 3s ease;
     opacity: 1;
     transform: none;
-} */
-
-#Enter,
-#CLR,
-#Operators,
-#Trigo,
-#Symbols,
-#Undo,
-#Redo {
-   /* text-align: center; */
-   margin: auto;
-   background-color: #a7c9e6;
-   /* border: solid 2px black; */
-   font-size: 20px;
-   padding: 10px;
-   /* position: relative; */
-   flex: 1;
 }
 
-
-#Enter:hover,
-#CLR:hover,
-#Operators:hover,
-#Trigo:hover,
-#Symbols:hover,
-#Undo:hover,
-#Redo:hover {
-    background-color: #5f83e7;
-}
 
 /* Calculator Input & Output */
 
-input[type=text] {
+#calcInput {
     margin: auto;
     background-color: rgb(238, 235, 235);
+    border: solid 2px black;
+    width: 98.8%;
+    font-size: 18px;
+    height: 40px;
 }
 
-input[type=text]:hover{
+#calcInput:hover {
     outline: none;
     border: 3px solid #3e6cea;
 }
 
-#calcInput {
-    width: 94%;
-    font-size: 15px;
-    padding: 9px;
+#calcOutput {
+    background-color:rgb(238, 235, 235);
+    border: solid 2px black;
+    margin: auto;
+    margin-top: 5px;
+    width: 99.2%;
+    height: 45px;
+
 }
 
-#calcOutput {
-    width: 93.5%;
-    font-size: 24px;
-    margin-top: 10px;
-    padding: 10px;
+#calcOutput:hover {
+    outline: none;
+    border: 3px solid #3e6cea;
 }
+
