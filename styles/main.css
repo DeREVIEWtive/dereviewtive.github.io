@@ -306,20 +306,21 @@ h6 {
 
 #OperatorMenuItem {
     opacity: 0;
+    display: flex;
+    flex-direction: row;
     position: absolute;
     left: 96px;
     bottom: 340px;
     margin: 0;
     padding: 0px;
-    background: rgb(181, 181, 183);
     transform: translateX(-100%);
+    /* background: rgb(181, 181, 183); */
     z-index: 1000;
 
 }
 
 #OperatorMenuItem div {
     pointer-events: all;
-    display: flex;
     border: solid 2px black;
     padding: 5px;
     /* border-radius: 8px; */
@@ -343,8 +344,8 @@ h6 {
     z-index: 1000;
 }
 
-#OperatorItem:hover {
-    transition: all 3s ease;
+#OperatorMenuItem:hover {
+    /* transition: all 3s ease; */
     opacity: 1;
     transform: none;
 }
