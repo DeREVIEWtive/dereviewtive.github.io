@@ -649,7 +649,7 @@ Again, not much to do here other than use the quotient rule. Don’t forget to c
           </msup>
           <mo>−</mo>
           <mn>2</mn>
-          <mo stretchy="false">)</ undertakings
+          <mo stretchy="false">
         </mrow>
         <mn>2</mn>
       </msup>

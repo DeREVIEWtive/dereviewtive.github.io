@@ -1,6 +1,8 @@
 What is Derivative?
 
 # What is Derivative?
+It is basically a way to measure how something is changing at a specific moment. Think of it as the "speedometer" of math— it tells you how fast a function is going up or down at any point.
+
 The computation of the slope of a tangent line, the instantaneous rate of change of a function, and the instantaneous velocity of an object at <math>><mi>x</mi><mo>=</mo><mi>a</mi></math> all required us to compute the following limit
       <math display="block">
         <munder>
