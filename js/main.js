@@ -10,7 +10,7 @@ window.onload = async () => {
     if (lesson != null) contentRequest = await fetch(`/lessons/${lesson}.md`);
     else
     {
-        // window.history.replaceState({ }, "", `/${page ?? ""}`);
+        window.history.replaceState({ }, "", `/${page ?? ""}`);
         contentRequest = await fetch(`/pages/${page ?? "index"}.md`);
     }
 
