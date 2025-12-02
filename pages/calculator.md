@@ -8,14 +8,24 @@ Calculator
          <div id="calcButtons">
             <div id="OperatorMenu">
             <div id="Operators">+</div>
-            </div>
             <div id="OperatorMenuItem">
                 <div>+</div>
                 <div>-</div>
                 <div>×</div>
                 <div>÷</div>
             </div>
+            </div>
+            <!-- <div id="TrigoMenu">
             <div id="Trigo">Trigo</div>
+            </div>
+             <div class="TrigoMenuItem">
+                <div>sine</div>
+                <div>cosine</div>
+                <div>tangent</div>
+                <div>cosecant</div>
+                <div>secant</div>
+                <div>cotangent</div>
+             </div> -->
             <div id="Symbols">√</div>
             <div onclick="calculate()" id="Enter">Enter</div>
             <div onclick="clearInput()" id="CLR">Clear</div>
@@ -28,19 +38,6 @@ Calculator
 
 
 <!-- Dropdown Menus -->
-
-  
-
-<div class="TrigoMenu">
-    <div class="TrigoMenuItem">
-        <button>sine</button>
-        <button>cosine</button>
-        <button>tangent</button>
-        <button>cosecant</button>
-         <button>secant</button>
-        <button>cotangent</button>
-    </div>
-</div>
 
 <div class="SymbolsMenu">
     <div class="SymbolsMenuItem">
