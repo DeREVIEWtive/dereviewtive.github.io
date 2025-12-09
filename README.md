@@ -232,14 +232,6 @@ The calculator has been tested with:
 ### Higher Derivatives
 - Any expression: Calculate up to 10th derivative or until zero
 
-## Known Limitations
-
-1. **Single Variable Only** - Currently differentiates with respect to x only
-2. **Implicit Differentiation** - Not yet implemented
-3. **Integration** - Buttons present but not functional
-4. **Limits** - Notation supported but calculation not implemented
-5. **Complex Numbers** - Limited support for imaginary unit i
-
 ## Future Enhancements
 
 - [ ] Graph visualization (f(x) and f'(x) side by side)
