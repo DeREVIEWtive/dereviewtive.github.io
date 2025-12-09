@@ -60,7 +60,7 @@ We also saw that with a small change of notation this limit could also be writte
         </mfrac>
       </math>
 This is such an important limit and it arises in so many places that we give it a name. We call it a derivative.
-## Defintion of the Derivative
+## Definition of the Derivative
 The derivative of <math><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> with respect to <math><mi>x</mi></math> is the function <math><mrow><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math> and is defined as,
       <math display="block">
         <mrow>
@@ -203,7 +203,7 @@ Note that this theorem does not work in reverse. Consider <math><mi>f</mi><mo st
       </math>
 So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is continuous at <math><mi>x</mi><mo>=</mo><mn>0</mn></math> but we’ve just shown above in Example 4 that <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is not differentiable at <math><mi>x</mi><mo>=</mo><mn>0</mn></math>.
 </div>
- 
+
 
  
 <style>
