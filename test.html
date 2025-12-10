@@ -1,2 +1,273 @@
+// calculator.js
+// I wanted to make this object-oriented for cleaner code
+class Calculator {
+    constructor(previousElement, currentElement) {
+        this.previousElement = previousElement;
+        this.currentElement = currentElement;
+        this.reset();
+    }
+    
+    // Reset everything
+    reset() {
+        this.currentValue = '0';
+        this.previousValue = '';
+        this.operation = null;
+        this.shouldResetScreen = false;
+        console.log('Calculator reset');
+    }
+    
+    // Clear just the current value
+    clearCurrent() {
+        this.currentValue = '0';
+    }
+    
+    // Remove last character
+    backspace() {
+        if (this.currentValue.length === 1) {
+            this.currentValue = '0';
+        } else {
+            this.currentValue = this.currentValue.slice(0, -1);
+        }
+    }
+    
+    // Add number or decimal point
+    addNumber(number) {
+        // If we just calculated something, start fresh
+        if (this.shouldResetScreen) {
+            this.currentValue = '';
+            this.shouldResetScreen = false;
+        }
+        
+        // Prevent multiple decimal points
+        if (number === '.' && this.currentValue.includes('.')) {
+            return;
+        }
+        
+        // Replace initial zero (unless it's a decimal)
+        if (this.currentValue === '0' && number !== '.') {
+            this.currentValue = number;
+        } else {
+            this.currentValue += number;
+        }
+    }
+    
+    // Choose an operation (+, -, ×, ÷)
+    chooseOperation(operation) {
+        if (this.currentValue === '') return;
+        
+        // If there's already a pending operation, calculate it first
+        if (this.previousValue !== '') {
+            this.calculate();
+        }
+        
+        this.operation = operation;
+        this.previousValue = this.currentValue;
+        this.currentValue = '';
+    }
+    
+    // Perform the calculation
+    calculate() {
+        let result;
+        const prev = parseFloat(this.previousValue);
+        const current = parseFloat(this.currentValue);
+        
+        // Check if we have valid numbers
+        if (isNaN(prev) || isNaN(current)) {
+            console.warn('Invalid numbers for calculation');
+            return;
+        }
+        
+        // Do the math based on the operation
+        switch (this.operation) {
+            case '+':
+                result = prev + current;
+                break;
+            case '-':
+                result = prev - current;
+                break;
+            case '×':
+                result = prev * current;
+                break;
+            case '÷':
+                if (current === 0) {
+                    alert("Hey, can't divide by zero! That breaks math.");
+                    this.reset();
+                    return;
+                }
+                result = prev / current;
+                break;
+            default:
+                return;
+        }
+        
+        // Handle floating point precision issues
+        result = Math.round(result * 100000000) / 100000000;
+        
+        this.currentValue = result.toString();
+        this.operation = null;
+        this.previousValue = '';
+        this.shouldResetScreen = true;
+        
+        console.log(Calculation: ${prev} ${this.operation || ''} ${current} = ${result});
+    }
+    
+    // Format numbers with commas for readability
+    formatNumber(number) {
+        const stringNumber = number.toString();
+        
+        // Split into integer and decimal parts
+        const integerDigits = parseFloat(stringNumber.split('.')[0]);
+        const decimalDigits = stringNumber.split('.')[1];
+        
+        let integerDisplay;
+        
+        if (isNaN(integerDigits)) {
+            integerDisplay = '';
+        } else {
+            // Add commas for thousands
+            integerDisplay = integerDigits.toLocaleString('en', {
+                maximumFractionDigits: 0
+            });
+        }
+        
+        // Handle decimal part
+        if (decimalDigits != null) {
+            return ${integerDisplay}.${decimalDigits};
+        } else {
+            return integerDisplay;
+        }
+    }
+    
+    // Update the display
+    updateDisplay() {
+        this.currentElement.textContent = this.formatNumber(this.currentValue);
+        
+        if (this.operation != null) {
+            this.previousElement.textContent = 
+                ${this.formatNumber(this.previousValue)} ${this.operation};
+        } else {
+            this.previousElement.textContent = '';
+        }
+    }
+}
 
+// Wait for DOM to load - learned this the hard way
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Calculator loading...');
+    
+    // Get DOM elements
+    const previousElement = document.getElementById('previous');
+    const currentElement = document.getElementById('current');
+    const numberButtons = document.querySelectorAll('[data-number]');
+    const operationButtons = document.querySelectorAll('[data-operation]');
+    const actionButtons = document.querySelectorAll('[data-action]');
+    
+    // Create calculator instance
+    const calculator = new Calculator(previousElement, currentElement);
+    
+    // Number button click handlers
+    numberButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            calculator.addNumber(button.dataset.number);
+            calculator.updateDisplay();
+        });
+    });
+    
+    // Operation button click handlers
+    operationButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            calculator.chooseOperation(button.dataset.operation);
+            calculator.updateDisplay();
+        });
+    });
+    
+    // Action button click handlers (clear, equals, etc.)
+    actionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const action = button.dataset.action;
+            
+            switch(action) {
+                case 'calculate':
+                    calculator.calculate();
+                    break;
+                case 'clear-all':
+                    calculator.reset();
+                    break;
+                case 'clear':
+                    calculator.clearCurrent();
+                    break;
+                case 'backspace':
+                    calculator.backspace();
+                    break;
+            }
+            
+            calculator.updateDisplay();
+        });
+    });
+    
+    // Keyboard support - makes it faster to use
+    document.addEventListener('keydown', event => {
+        // Prevent default for keys we handle
+        if (
+            (event.key >= '0' && event.key <= '9') ||
+            event.key === '.' ||
+            ['+', '-', '*', '/', 'Enter', 'Escape', 'Backspace'].includes(event.key)
+        ) {
+            event.preventDefault();
+        }
+        
+        // Numbers and decimal
+        if (event.key >= '0' && event.key <= '9') {
+            calculator.addNumber(event.key);
+            calculator.updateDisplay();
+        }
+        
+        if (event.key === '.') {
+            calculator.addNumber('.');
+            calculator.updateDisplay();
+        }
+        
+        // Operations
+        if (event.key === '+' || event.key === '-') {
+            calculator.chooseOperation(event.key);
+            calculator.updateDisplay();
+        }
+        
+        if (event.key === '*') {
+            calculator.chooseOperation('×');
+            calculator.updateDisplay();
+        }
+        
+        if (event.key === '/') {
+            calculator.chooseOperation('÷');
+            calculator.updateDisplay();
+        }
+        
+        // Actions
+        if (event.key === 'Enter' || event.key === '=') {
+            calculator.calculate();
+            calculator.updateDisplay();
+        }
+        
+        if (event.key === 'Escape') {
+            calculator.reset();
+            calculator.updateDisplay();
+        }
+        
+        if (event.key === 'Backspace') {
+            calculator.backspace();
+            calculator.updateDisplay();
+        }
+        
+        // Log key presses for debugging
+        console.log(Key pressed: ${event.key});
+    });
+    
+    // Initial display update
+    calculator.updateDisplay();
+    console.log('Calculator ready!');
+    
+    // Little Easter egg in console
+    console.log('%c🔢 Calculator loaded successfully!', 'color: #27ae60; font-size: 14px; font-weight: bold;');
+});
 
