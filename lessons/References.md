@@ -1,4 +1,4 @@
 References
 
 # References 
-<!-- <a href="https://tutorial.math.lamar.edu/classes/calcI/DerivativeIntro.aspx">Derivative Lessons</a> -->
+Paul D. (2003) Derivatives. Paul's Online Notes. <a href="https://tutorial.math.lamar.edu/classes/calcI/DerivativeIntro.aspx">https://tutorial.math.lamar.edu/classes/calcI/DerivativeIntro.aspx</a>
