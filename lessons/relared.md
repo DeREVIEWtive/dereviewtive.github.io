@@ -143,6 +143,7 @@ Notice that we got the correct sign for <math><msup><mi>y</mi><mo>′</mo></msup
 Before working another example, we need to make a comment about the set up of the previous problem. When we labeled our sketch, we acknowledged that the hypotenuse is constant and so just called it 15 ft. A common mistake that students will sometimes make here is to also label the hypotenuse as a letter, say <math><mi>z</mi></math>, in this case.
 
 Well, it’s not really a mistake to label with a letter, but it will often lead to problem down the road. Had we labeled the hypotenuse <math><mi>z</mi></math> then the Pythagorean theorem and its derivative would have been,
+
 <math display="block">
     <msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup>
     <mo>→</mo>
@@ -213,13 +214,19 @@ This is asking for the rate of change of the length of the shadow. Let the lengt
 </math>
 
 From part (a), we know <math><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>48</mn><mn>13</mn></mfrac></math> and we are given <math><msubsup><mi>x</mi><mi>p</mi><mo>′</mo></msubsup><mo>=</mo><mn>2</mn></math>. So,
+
 <math display="block">
     <msubsup><mi>x</mi><mi>s</mi><mo>′</mo></msubsup><mo>=</mo><mfrac><mn>48</mn><mn>13</mn></mfrac><mo>−</mo><mn>2</mn><mo>=</mo><mfrac><mn>48</mn><mn>13</mn></mfrac><mo>−</mo><mfrac><mn>26</mn><mn>13</mn></mfrac><mo>=</mo><mfrac><mn>22</mn><mn>13</mn></mfrac><mo>≈</mo><mn>1.6923</mn><mtext> ft/sec</mtext>
 </math>
+
 The length of the shadow is increasing at a rate of 1.6923 ft/sec.
 
 <style>
 mi { 
-  font-size: 18px;
+  font-size: 24px;
+}
+
+mo {
+  font-size: 19px;
 }
 </style>

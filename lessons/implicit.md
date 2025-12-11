@@ -36,6 +36,7 @@ This is the simple way of doing the problem. Just solve for <math><mi>y</mi></ma
       </msup>
     </mfrac>
 </math>
+
 So, that’s easy enough to do. However, there are some functions for which this can’t be done. That’s where the second solution technique comes into play.
 
 Solution 2:
@@ -103,7 +104,9 @@ The right side is easy. It’s just the derivative of a constant. The left side 
     <mo>=</mo>
     <mn>0</mn>
 </math>
+
 Now, recall that we have the following notational way of writing the derivative.
+
 <math display="block">
     <mfrac>
       <mi>d</mi>
@@ -135,7 +138,9 @@ Now, recall that we have the following notational way of writing the derivative.
       <mo>′</mo>
     </msup>
 </math>
+
 Using this we get the following,
+
 <math display="block">
     <mi>y</mi>
     <mo>+</mo>
@@ -193,7 +198,7 @@ There it is. Using the second solution technique this is our answer. This is not
     </mfrac>
 </math>
 
-which is what we got from the first solution. Regardless of the solution technique used we should get the same derivative.
+Which is what we got from the first solution. Regardless of the solution technique used we should get the same derivative.
 
 The process that we used in the second solution to the previous example is called implicit differentiation and that is the subject of this section. In the previous example we were able to just solve for <math><mi>y</mi></math> and avoid implicit differentiation. However, in the remainder of the examples in this section we either won’t be able to solve for <math><mi>y</mi></math> or, as we’ll see in one of the examples below, the answer will not be in a form that we can deal with.
 
@@ -259,6 +264,7 @@ With the first function here we’re being asked to do the following,
     <mn>7</mn>
     <mo stretchy="false">)</mo>
 </math>
+
 and this is just the chain rule. We differentiated the outside function (the exponent of 5) and then multiplied that by the derivative of the inside function (the stuff inside the parenthesis).
 
 For the second function we’re going to do basically the same thing. We’re going to need to use the chain rule. The outside function is still the exponent of 5 while the inside function this time is simply <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>. We don’t have a specific function here, but that doesn’t mean that we can’t at least write down the chain rule for this function. Here is the derivative for this function,
@@ -303,9 +309,11 @@ For the second function we’re going to do basically the same thing. We’re go
     <mi>x</mi>
     <mo stretchy="false">)</>
 </math>
+
 We don’t actually know what <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is so when we do the derivative of the inside function all we can do is write down notation for the derivative, i.e. <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>.
 
 With the final function here we simply replaced the <math><mi>f</mi></math> in the second function with a <math><mi>y</mi></math> since most of our work in this section will involve <math><mi>y</mi></math>’s instead of <math><mi>f</mi></math>’s. Outside of that this function is identical to the second. So, the derivative is,
+
 <math display="block">
     <mfrac>
       <mi>d</mi>
@@ -380,7 +388,9 @@ The first function to differentiate here is just a quick chain rule problem agai
     <mo stretchy="false">)</>
 </math>
 
-For the second function we didn’t bother this time with using <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and just jumped straight to <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> for the general version. This is still just a general version of what we did for the first function. The outside function is still the sine and the inside is given by <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and while we don’t have a formula for <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and so we can’t actually take its derivative we do have a notation for its derivative. Here is the derivative for this function,
+For the second function we didn’t bother this time with using <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and just jumped straight to <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> for the general version. 
+
+This is still just a general version of what we did for the first function. The outside function is still the sine and the inside is given by <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and while we don’t have a formula for <math><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and so we can’t actually take its derivative we do have a notation for its derivative. Here is the derivative for this function,
 
 <math display="block">
     <mfrac>
@@ -417,6 +427,7 @@ For the second function we didn’t bother this time with using <math><mi>f</mi>
 </math>
   
 c) <math><msup><mi>e</mi><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn><mi>x</mi></mrow></msup></math>, <math><msup><mi>e</mi><mrow><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></msup></math>
+
 In this part we’ll just give the answers for each and leave out the explanation that we had in the first two parts.
 
 <math display="block">
@@ -520,6 +531,7 @@ So, it’s now time to do our first problem where implicit differentiation is re
 
 ### Solution
 Now, this is just a circle and we can solve for <math><mi>y</mi></math> which would give,
+
 <math mdisplay="block">
     <mi>y</mi>
     <mo>=</mo>
@@ -634,6 +646,10 @@ Unlike the first example we can’t just plug in for <math><mi>y</mi></math> sin
 
 <style>
 mi { 
-  font-size: 18px;
+  font-size: 24px;
+}
+
+mo {
+  font-size: 19px;
 }
 </style>

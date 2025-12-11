@@ -269,9 +269,11 @@ Doing the change of variables on this limit gives,
     <mo>=</mo>
     <mn>6</mn>
 </math>
+
 And there we are. Note that we didn’t really need to do a change of variables here. All we really need to notice is that the argument of the sine is the same as the denominator and then we can use the fact. A change of variables, in this case, is really only needed to make it clear that the fact does work.
 
 c) <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mi>x</mi><mrow><mi>sin</mi><mo stretchy="false">(</mo><mn>7</mn><mi>x</mi><mo stretchy="false">)</mo></mrow></mfrac></math>
+
 ### Solution
 In this case we appear to have a small problem in that the function we’re taking the limit of here is upside down compared to that in the fact. This is not the problem it appears to be once we notice that,
 
@@ -301,6 +303,7 @@ In this case we appear to have a small problem in that the function we’re taki
       </mfrac>
     </mfrac>
 </math>
+
 and then all we need to do is recall a nice property of limits that allows us to do,
 
 <math display="block">
@@ -403,6 +406,7 @@ and then all we need to do is recall a nice property of limits that allows us to
       </mrow>
     </mfrac>
 </math>
+
 With a little rewriting we can see that we do in fact end up needing to do a limit like the one we did in the previous part. So, let’s do the limit here and this time we won’t bother with a change of variable to help us out. All we need to do is multiply the numerator and denominator of the fraction in the denominator by 7 to get things set up to use the fact. Here is the work for this limit.
 
 <math display="block">
@@ -498,7 +502,9 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
       <mn>7</mn>
     </mfrac>
 </math>
+
 Okay, now that we’ve gotten this set of limit examples out of the way let’s get back to the main point of this section, differentiating trig functions.
+
 We’ll start with finding the derivative of the sine function. To do this we will need to use the definition of the derivative. It’s been a while since we’ve had to use this, but sometimes there just isn’t anything we can do about it. Here is the definition of the derivative for the sine function.
 
 <math display="block">
@@ -541,6 +547,7 @@ We’ll start with finding the derivative of the sine function. To do this we wi
       <mi>h</mi>
     </mfrac>
 </math>
+
 Since we can’t just plug in <math><mi>h</mi><mo>=</mo><mn>0</mn></math> to evaluate the limit we will need to use the following trig formula on the first sine in the numerator.
 
 <math display="block">
@@ -569,7 +576,9 @@ Since we can’t just plug in <math><mi>h</mi><mo>=</mo><mn>0</mn></math> to eva
     <mi>h</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 Doing this gives us,
+
 <math display="block">
     <mfrac>
       <mi>d</mi>
@@ -704,6 +713,7 @@ Doing this gives us,
       <mi>h</mi>
     </mfrac>
 </math>
+
 As you can see upon using the trig formula we can combine the first and third term and then factor a sine out of that. We can then break up the fraction into two pieces, both of which can be dealt with separately.
 Now, both of the limits here are limits as <math><mi>h</mi></math> approaches zero. In the first limit we have a <math><mi>sin</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and in the second limit we have a <math><mi>cos</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>. Both of these are only functions of <math><mi>x</mi></math> only and as <math><mi>h</mi></math> moves in towards zero this has no effect on the value of <math><mi>x</mi></math>. Therefore, as far as the limits are concerned, these two functions are constants and can be factored out of their respective limits. Doing this gives,
 
@@ -768,6 +778,7 @@ Now, both of the limits here are limits as <math><mi>h</mi></math> approaches ze
       <mi>h</mi>
     </mfrac>
 </math>
+
 At this point all we need to do is use the limits in the fact above to finish out this problem.
 
 <math display="block">
@@ -806,6 +817,7 @@ At this point all we need to do is use the limits in the fact above to finish ou
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 Differentiating cosine is done in a similar fashion. It will require a different trig formula, but other than that is an almost identical proof. The details will be left to you. When done with the proof you should get,
 
 <math display="block">
@@ -829,6 +841,7 @@ Differentiating cosine is done in a similar fashion. It will require a different
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 With these two out of the way the remaining four are fairly simple to get. All the remaining four trig functions can be defined in terms of sine and cosine and these definitions, along with appropriate derivative rules, can be used to get their derivatives.
 Let’s take a look at tangent. Tangent is defined as,
 
@@ -853,6 +866,7 @@ Let’s take a look at tangent. Tangent is defined as,
       </mrow>
     </mfrac>
 </math>
+
 Now that we have the derivatives of sine and cosine all that we need to do is use the quotient rule on this. Let’s do that.
 
 <math display="block">
@@ -961,6 +975,7 @@ Now that we have the derivatives of sine and cosine all that we need to do is us
       </mrow>
     </mfrac>
 </math>
+
 Now, recall that <math><msup><mi>cos</mi><mn>2</mn></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><msup><mi>sin</mi><mn>2</mn></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math> and if we also recall the definition of secant in terms of cosine we arrive at,
 
 <math display="block">
@@ -999,6 +1014,7 @@ Now, recall that <math><msup><mi>cos</mi><mn>2</mn></msup><mo stretchy="false">(
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 The remaining three trig functions are also quotients involving sine and/or cosine and so can be differentiated in a similar manner. We’ll leave the details to you. Here are the derivatives of all six of the trig functions.
   
 ## Derivatives of the six trigonometric functions
@@ -1274,6 +1290,7 @@ We will also need to be careful with the minus sign in front of the second term 
     <mi>w</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 Because the second term is being subtracted off of the first term then the whole derivative of the second term must also be subtracted off of the derivative of the first term. The parenthesis make this idea clear.
 A potentially easier way to do this is to think of the minus sign as part of the first function in the product. Or, in other words the two functions in the product, using this idea, are <math><mo>−</mo><msup><mi>w</mi><mn>2</mn></msup></math> and <math><mi>tan</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></math>. Doing this gives,
 
@@ -1315,7 +1332,9 @@ A potentially easier way to do this is to think of the minus sign as part of the
     <mi>w</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 So, regardless of how you approach this problem you will get the same derivative.
+
 
 c) <math><mi>y</mi><mo>=</mo><mn>5</mn><mi>sin</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>cos</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mn>4</mn><mi>csc</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>
 
@@ -1392,7 +1411,11 @@ As with the previous part we’ll need to use the product rule on the first term
 
 <style>
 mi { 
-  font-size: 18px;
+  font-size: 24px;
+}
+
+mo {
+  font-size: 19px;
 }
 </style>
 

@@ -38,6 +38,7 @@ This section introduces a collection of formulas and properties that will allow 
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 In other words, to differentiate a sum or difference all we need to do is differentiate the individual terms and then put them back together with the appropriate signs. Note as well that this property is not limited to two functions.
 
 ### Multiple Rule
@@ -68,8 +69,10 @@ Where <math><mi>c</mi></math> is any number.
 
 ### Derivative of a Constant Function
 If <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi></math> then <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>.The derivative of a constant is zero.
+
 ### Power Rule
 If <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup></math> then <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>, where <math><mi>n</mi></math> is any number.
+
 This formula is sometimes called the power rule. All we are doing here is bringing the original exponent down in front and multiplying and then subtracting one from the original exponent.
 
 
@@ -957,12 +960,17 @@ Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></m
       <mo stretchy="false">)</mo>
     </mrow>
 </math>
+
 The outside function is always the last operation you would perform when evaluating. For instance, to find <math><mi>R</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></math>, you would first evaluate <math><mn>5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>−</mo><mn>8</mn></math> and then take the square root of the result. The square root is the last operation, making it the outside function.
 
 
 
 <style>
 mi { 
-  font-size: 18px;
+  font-size: 24px;
+}
+
+mo {
+  font-size: 19px;
 }
 </style>

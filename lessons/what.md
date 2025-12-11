@@ -143,9 +143,7 @@ Notice that every term in the numerator that didn’t have an <math><mi>h</mi></
 So, the derivative is,
         <math display="block">
           <msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>18</mn>
-        </math>
-    </div>
-</div>
+        </math
 
 Let’s work one more example. This one will be a little different, but it’s got a point that needs to be made.
 ## Example 2
@@ -185,8 +183,9 @@ The two one-sided limits are different and so
         </math>
 However, this is the limit that gives us the derivative that we’re after.
 If the limit doesn’t exist then the derivative doesn’t exist either.
-      </div>
-In this example we have finally seen a function for which the derivative doesn’t exist at a point. This is a fact of life that we’ve got to be aware of. Derivatives will not always exist. Note as well that this doesn’t say anything about whether or not the derivative exists anywhere else. In fact, the derivative of the absolute value function exists at every point except the one we just looked at, <math><mi>x</mi><mo>=</mo><mn>0</mn></math>.
+In this example we have finally seen a function for which the derivative doesn’t exist at a point. This is a fact of life that we’ve got to be aware of. Derivatives will not always exist. 
+
+Note as well that this doesn’t say anything about whether or not the derivative exists anywhere else. In fact, the derivative of the absolute value function exists at every point except the one we just looked at, <math><mi>x</mi><mo>=</mo><mn>0</mn></math>.
 The preceding discussion leads to the following definition.
 ## Definition 
 Function <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable at <math><mi>x</mi><mo>=</mo><mi>a</mi></math> if <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></math> exists and <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> is called differentiable on an interval if the derivative exists for each point in that interval.
@@ -201,15 +200,16 @@ Note that this theorem does not work in reverse. Consider <math><mi>f</mi><mo st
         <mo>=</mo><mn>0</mn>
         <mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo>
       </math>
-So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is continuous at <math><mi>x</mi><mo>=</mo><mn>0</mn></math> but we’ve just shown above in Example 4 that <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is not differentiable at <math><mi>x</mi><mo>=</mo><mn>0</mn></math>.
-</div>
+So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is continuous at <math><mi>x</mi><mo>=</mo><mn>0</mn></math> but we’ve just shown above in Example 4 that <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is not differentiable at <math><mi>x</mi><mo>=</mo><mn>0</mn></mat
 
 
  
 <style>
 mi { 
-  font-size: 18px;
+  font-size: 24px;
+}
+
+mo {
+  font-size: 19px;
 }
 </style>
-
-
