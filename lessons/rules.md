@@ -964,6 +964,9 @@ Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></m
 The outside function is always the last operation you would perform when evaluating. For instance, to find <math><mi>R</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></math>, you would first evaluate <math><mn>5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>−</mo><mn>8</mn></math> and then take the square root of the result. The square root is the last operation, making it the outside function.
 
 
+## Try to Solve
+It's now your turn to solve derivatives using the aformentioned rules, below are 
+
 
 <style>
 mi { 
