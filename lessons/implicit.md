@@ -649,6 +649,10 @@ mi {
   font-size: 24px;
 }
 
+mn {
+  font-size: 21px;
+}
+
 mo {
   font-size: 19px;
 }

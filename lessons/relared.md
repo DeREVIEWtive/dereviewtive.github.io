@@ -221,9 +221,14 @@ From part (a), we know <math><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mfrac
 
 The length of the shadow is increasing at a rate of 1.6923 ft/sec.
 
+
 <style>
 mi { 
   font-size: 24px;
+}
+
+mn {
+  font-size: 21px;
 }
 
 mo {

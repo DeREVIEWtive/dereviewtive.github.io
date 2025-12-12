@@ -965,12 +965,26 @@ The outside function is always the last operation you would perform when evaluat
 
 
 ## Try to Solve
-It's now your turn to solve derivatives using the aformentioned rules, below are 
-
+It's now your turn to solve derivatives using the 8 aformentioned rules.
+1. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>100</mn></math>
+2. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><mi>x</mi><mi>
+</mi><mo>+</mo><mn>4</mn></math>
+3. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></math>
+4. <math><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></math>
+5. <math><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>
+</mi><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mi>
+</mi></mrow><mrow><mn>2</mn><mo>-</mo><mn>1</mn></mrow></mfrac></math>
+6. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mi>
+</mi><mn>2</mn><mi>
+</mi><mo>+</mo><mn>3</mn><mi>x</mi><msup><mo stretchy="false">)</mo><mn>5</mn></msup></math>
 
 <style>
 mi { 
   font-size: 24px;
+}
+
+mn {
+  font-size: 20px;
 }
 
 mo {

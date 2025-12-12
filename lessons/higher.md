@@ -293,9 +293,14 @@ In the previous two examples we saw some patterns in the differentiation of expo
 
 So, we can see with slightly more complicated arguments the patterns that we saw for exponential functions, sines and cosines no longer completely hold.
 
+
 <style>
 mi { 
   font-size: 24px;
+}
+
+mn {
+  font-size: 21px;
 }
 
 mo {
