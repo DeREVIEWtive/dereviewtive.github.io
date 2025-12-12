@@ -25,7 +25,7 @@ Prior to delving into the derivatives of trigonometric functions, we must presen
     </mfrac>
     <mo>=</mo>
     <mn>1</mn>
-    <mspace width="2em" />
+    <mspace width="5em"/>
     <munder>
       <mo>lim</mo>
       <mrow>
@@ -83,6 +83,7 @@ There really isn’t a whole lot to this limit. In fact, it’s only here to con
       <mn>1</mn>
       <mn>6</mn>
     </mfrac>
+    <mrow>
     <munder>
       <mo>lim</mo>
       <mrow>
