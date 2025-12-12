@@ -101,7 +101,7 @@ ul.submenu .subheader {
 nav:not(#sidebar) {
     text-decoration: none;
     /* background: rgb(174, 172, 172); */
-     background: #7e50db;
+     background: #8a5fde;
     /* background: #81db8e; */
     border-bottom: solid black 3px;
     display: flex;
@@ -129,6 +129,11 @@ nav a:not(#sidebar) {
     margin: auto;
     color: black;
     text-decoration: none;
+}
+
+#navitem a:hover {
+    text-decoration: underline;
+
 }
 
 #content{
