@@ -26,7 +26,7 @@ Prior to delving into the derivatives of trigonometric functions, we must presen
     </mfrac>
     <mo>=</mo>
     <mn>1</mn>
-    <mspace width="3em" />
+    <mspace width="5em"/>
     <munder>
       <mo>lim</mo>
       <mrow>
@@ -84,6 +84,7 @@ There really isn’t a whole lot to this limit. In fact, it’s only here to con
       <mn>1</mn>
       <mn>6</mn>
     </mfrac>
+    <mrow>
     <munder>
       <mo>lim</mo>
       <mrow>
@@ -508,6 +509,7 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
 </math>
 
 Okay, now that we’ve gotten this set of limit examples out of the way let’s get back to the main point of this section, differentiating trig functions.
+
 We’ll start with finding the derivative of the sine function. To do this we will need to use the definition of the derivative. It’s been a while since we’ve had to use this, but sometimes there just isn’t anything we can do about it. Here is the definition of the derivative for the sine function.
 
 <math display="block">
@@ -849,6 +851,7 @@ Differentiating cosine is done in a similar fashion. It will require a different
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 With these two out of the way the remaining four are fairly simple to get. All the remaining four trig functions can be defined in terms of sine and cosine and these definitions, along with appropriate derivative rules, can be used to get their derivatives.
 Let’s take a look at tangent. Tangent is defined as,
 
@@ -1352,6 +1355,7 @@ A potentially easier way to do this is to think of the minus sign as part of the
 
 So, regardless of how you approach this problem you will get the same derivative.
 
+
 c) <math><mi>y</mi><mo>=</mo><mn>5</mn><mi>sin</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>cos</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mn>4</mn><mi>csc</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>
 
 ### Solution
@@ -1424,6 +1428,7 @@ As with the previous part we’ll need to use the product rule on the first term
     <mi>x</mi>
     <mo stretchy="false">)</mo>
 </math>
+
 
 <style>
 mi { 
