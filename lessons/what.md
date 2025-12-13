@@ -111,6 +111,7 @@ Here are some examples of derivatives using the definition.
 
 ### Example 1
 Find the derivative of the following function using the definition of the derivative.
+
 <math display="block"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>40</mn></math>
 
 So, all we really need to do is to put this function into the definition of the derivative, and do some algebra. While, admittedly, the algebra will get somewhat unpleasant at times, but it’s just algebra so don’t get excited about the fact that we’re now computing derivatives.
@@ -196,7 +197,7 @@ We saw a situation like this back when we were looking at limits at infinity. As
           <mspace width="1em"></mspace><mtext>because </mtext><mi>h</mi><mo>&gt;</mo><mn>0</mn><mtext> in a right-hand limit.</mtext>
           <mo>=</mo><munder><mo>lim</mo><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mn>1</mn>
           <mo>=</mo><mn>1</mn>
-</math>
+        </math>
 
 The two one-sided limits are different and so
 
@@ -229,13 +230,8 @@ Note that this theorem does not work in reverse. Consider <math><mi>f</mi><mo st
         <mo>=</mo><mn>0</mn>
         <mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo>
       </math>
+
 So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is continuous at <math><mi>x</mi><mo>=</mo><mn>0</mn></math> but we’ve just shown above in Example 4 that <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math> is not differentiable at <math><mi>x</mi><mo>=</mo><mn>0</mn></mat
-
-
-
-
-
- 
 
 <style>
 mi { 
