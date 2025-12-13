@@ -216,14 +216,14 @@ So, <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)<
 
 <style>
 mi { 
-  font-size: 24px;
+  font-size: 20px;
 }
 
 mn {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 mo {
-  font-size: 19px;
+  font-size: 20px;
 }
 </style>

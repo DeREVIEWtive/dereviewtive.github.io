@@ -1410,16 +1410,17 @@ As with the previous part we’ll need to use the product rule on the first term
     <mo stretchy="false">)</mo>
 </math>
 
+
 <style>
 mi { 
-  font-size: 24px;
+  font-size: 20px;
 }
 
 mn {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 mo {
-  font-size: 19px;
+  font-size: 20px;
 }
 </style>

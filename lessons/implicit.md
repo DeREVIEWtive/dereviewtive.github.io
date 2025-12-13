@@ -644,16 +644,17 @@ At this point we can drop the <math><mo stretchy="false">(</mo><mi>x</mi><mo str
 Unlike the first example we can’t just plug in for <math><mi>y</mi></math> since we wouldn’t know which of the two functions to use. Most answers from implicit differentiation will involve both <math><mi>x</mi></math> and <math><mi>y</mi></math> so don’t get excited about that when it happens.
 
 
+
 <style>
 mi { 
-  font-size: 24px;
+  font-size: 20px;
 }
 
 mn {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 mo {
-  font-size: 19px;
+  font-size: 20px;
 }
 </style>

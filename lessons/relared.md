@@ -224,14 +224,14 @@ The length of the shadow is increasing at a rate of 1.6923 ft/sec.
 
 <style>
 mi { 
-  font-size: 24px;
+  font-size: 20px;
 }
 
 mn {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 mo {
-  font-size: 19px;
+  font-size: 20px;
 }
 </style>
