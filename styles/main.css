@@ -1,407 +1,253 @@
 * {
-    scrollbar-color : rgb(180, 180, 182) rgb(214, 214, 214);
+  scrollbar-color: rgb(180, 180, 182) rgb(214, 214, 214);
 }
 
-html,body {
-    height: 100%;
+html, body {
+  height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Sans-serif;
-    overflow: clip;
-    background: rgb(181, 181, 183);
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  /* font-family: Arial, Sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
+  overflow: clip;
+  /* background: rgb(181, 181, 183); */
+  background: rgb(206, 203, 203);
+}
+
+body.is-calculator #lessons {
+  display: none !important;
+}
+
+body.is-calculator #info {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(100, 72, 240);
+  text-decoration: none;
 }
 
 a:hover:not(nav a) {
-    color: #3e6cea;
-    text-decoration: underline;
+  color: #3e6cea;
+  text-decoration: underline;
 }
 
 #sidebar {
-    display: none;
-    margin: auto 0;
-    margin-right: 15px;
-    color: black;
-    margin-left: 11px;
-    cursor: pointer;
-    /* position: relative; */
+  display: none;
+  margin: auto 0;
+  margin-right: 15px;
+  color: black;
+  margin-left: 11px;
+  cursor: pointer;
+  position: relative;
+}
+
+#sidebar.open .submenu {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
 }
 
 ul.submenu li {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  white-space: nowrap;
 }
 
 ul.submenu {
-    opacity: 0;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: rgb(214, 214, 214);
-    border: 3px solid black;
-    border-radius: 8px;
-    padding: 0;
-    margin: 0;
-    transition: all .3s ease;
-    transform: translateX(-100%);
-    z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  /* background: rgb(214, 214, 214); */
+  background: rgb(220, 220, 220);
+  border: 3px solid black;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  transition: all .3s ease;
+  transform: translateX(-100%);
+  z-index: 10000;
 }
 
 ul.submenu li a {
-    color: rgb(100, 72, 240) !important;
-    width: 100%;
-    display: block;
+  color: rgb(100, 72, 240) !important;
+  width: 100%;
+  display: block;
+  font-size: 20px !important;
 }
+
+
 
 ul.submenu .subheader {
-    border-bottom: 3px solid black;
-    background: rgb(181, 181, 183);
-    padding: 10px;
-    font-size: 20px;
-    color: black;
+  border-bottom: 3px solid black;
+  /* background: rgb(181, 181, 183); */
+  background: #9c7fd9;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
 }
-
-
-/* ul.submenu li:hover {
-    background: rgba(255, 255, 255, 0.1);
-} */
-
-/* #sidebar .submenu li {
-    color: rgb(100, 72, 240);
-    padding: 10px;
-    transition: background .2s ease;
-} */
-
 
 #sidebar:hover .submenu {
-    opacity: 1;
-    transform: none;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
 }
 
-
 #icon:hover i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #icon {
-    display: none;
-    font-size: 28px;
-    transition: transform .3s ease;
+  display: none;
+  font-size: 28px;
+  transition: transform .3s ease;
 }
 
 #icon i {
-    transition: transform .3s ease;
+  transition: transform .3s ease;
 }
-
 
 nav:not(#sidebar) {
-    text-decoration: none;
-    background: rgb(156, 156, 156);
-    display: flex;
-    padding: 10px 15px;
-    flex-wrap: wrap;
+  text-decoration: none;
+  /* background: rgb(156, 156, 156); */
+  border-bottom: solid 3px black;
+  background: #8a5fde;
+  display: flex;
+  padding: 10px 15px;
+  flex-wrap: wrap;
 }
 
-
 #navitem {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    font-size: 20px;
-    max-width: 400px;
-    margin-left: auto;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  max-width: 400px;
+  margin-left: auto;
 }
 
 nav h1:not(#sidebar) {
-    font-size: 28px;
-    margin-right: 2px;
+  font-size: 28px;
+  margin-right: 2px;
 }
-
 
 nav a:not(#sidebar) {
-    margin: auto;
-    color: black;
-    text-decoration: none;
+  margin: auto;
+  color: black;
+  text-decoration: none;
 }
 
-#content{
-    display: flex;
-    position: relative;
-    /* height: calc(100% - 26px); */
-    height: 25%;
-    flex: 1;
-    padding: 10px;
-    gap: 10px;
+#content {
+  display: flex;
+  position: relative;
+  height: 25%;
+  flex: 1;
+  padding: 10px;
+  gap: 10px;
+  overflow: hidden;
 }
 
 #content > div {
-    background: rgb(181, 181, 183);
-    border: 3px solid black;
-    border-radius: 8px;
-    overflow: clip;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  /* background: rgb(181, 181, 183); */
+  background: rgb(220, 220, 220);
+  border: 3px solid black;
+  border-radius: 8px;
+  overflow: clip;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #info {
-    width: 25%;
-    flex: 1;
+  width: 25%;
+  flex: 1;
 }
 
 #lessons {
-    text-align: center;
-    width: auto !important;
+  text-align: center;
+  width: auto !important;
 }
 
 #lessons .main a {
-    display: block;
-    white-space: nowrap;
-    font-size: 18px;
-    height: 10px;
-    position: relative;
-    top: -20px;
+  color: #4264c1;
+  display: block;
+  white-space: nowrap;
+  font-size: 18px;
+  height: 10px;
+  position: relative;
+  top: -20px;
 }
 
+#lessons .main a:hover {
+   color:rgb(58, 28, 206)
+}
 
 .header {
-    background: rgb(181, 181, 183);
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-    border-bottom: 3px solid black;
+  /* background: rgb(181, 181, 183); */
+  background: #9c7fd9;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  border-bottom: 3px solid black;
 }
 
 .main {
-    background: rgb(214, 214, 214);
-    position: relative;
-    height: 100%;
-    overflow-wrap: break-word;
-    padding: 8px;
-    white-space: pre-wrap;
-    /* overflow-y: auto;
-    overflow-x: clip; */
-    overflow: auto;
+  /* background: rgb(214, 214, 214); */
+  background: rgb(226, 225, 225);
+  position: relative;
+  height: 100%;
+  overflow-wrap: break-word;
+  padding: 8px;
+  white-space: pre-wrap;
+  overflow: auto;
 }
 
-
-
 /* Main content format */
-
-
 #main p {
+    font-size: 20px;
     margin-top: -10px;
+    font-size: 20px;
     padding-left: 4px;
     /* text-align: justify; */
 }
 
 #main h1 {
-    margin-bottom: 0px;
-    padding: 1px;
+  margin-bottom: 0px;
+  padding: 1px;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0px;
-    padding-left: 4px;
+#main h2, #main h3, #main h4, #main h5, #main h6 {
+  margin: 0px;
+  padding-left: 4px;
 }
 
 #main ul,
 #main ol {
-    margin-top: -20px;
-    margin-bottom: -10px;
-    padding-left: 30px;
-    /* padding-top: 0px; */
-    /* height: 10px; */
+  margin-top: -20px;
+  margin-bottom: -10px;
+  padding-left: 30px;
 }
 
 @media only screen and (max-width: 699px) {
-#lessons {
-    display: none !important;
+  #lessons { display: none !important; }
+  #sidebar { display: initial; }
+  #icon { display: initial; }
+  
+  #info {
+    width: 100% !important;
+  }
+  
+  /* ✅ Reduce content padding on mobile for more space */
+  #content {
+    padding: 5px;
+    gap: 5px;
+  }
 }
-
-#sidebar {
-    display: initial; 
-}
-#icon {
-    display: initial;
-}
-}
-
-/* Calculator Style */
-
-#calculator {
-    background: rgb(181, 181, 183);
-    display: flex;
-    flex-direction: column;
-    border: solid 2.5px black;
-    width: 100%;
-
-}
-
-
-#calcButtons{
-    padding-bottom: 7px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    cursor: pointer;
-
-}
-
-
-#calcDisplay{
-    display: flex;
-
-}
-
-/* Calculator Main Buttons */
-
-#Enter,
-#CLR,
-#Operators,
-#Trigo,
-#Symbols,
-#Undo,
-#Redo {
-   margin: auto;
-   /* margin-top: 40px !important; */
-   background-color: #a7c9e6;
-   border: solid 2px black;
-   text-align: center;
-   font-size: 20px;
-   padding: 10px;
-   flex: 1;
-}
-
-/* #Operators {
-    width: 
-} */
-
-#Enter:hover,
-#CLR:hover,
-#Operators:hover,
-#Trigo:hover,
-#Symbols:hover,
-#Undo:hover,
-#Redo:hover {
-    background-color: #5f83e7;
-}
-
-/* Calculator Drop Down*/
-
-
-#OperatorMenuItem{
-    opacity: 0;
-    transition: all 60ms ease;
-    display: grid;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: subgrid;
-}
-
-
-#OperatorMenuItem div {
-    display: flex;
-    flex-direction: column;
-    background: #d6d8db;
-    border: solid 2px black;
-    padding: 13px;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#OperatorMenuItem div:hover {
-    background-color: #5f83e7;
- 
-}
-.TrigoMenuItem{
-    opacity: 0;
-    transition: all 60ms ease;
-    display: grid;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column: 1 / -1;
-    grid-template-rows: subgrid;
-}
-
-#TrigoMenuItem div {
-    background: #d6d8db;
-    border: solid 2px black;
-    padding: 13px;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-
-.SymbolsMenu {
-    opacity: 0;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    background: rgb(214, 214, 214);
-    transform: translateX(-100%);
-    z-index: 1000;
-}
-
-#calcButtons:hover #OperatorMenuItem {
-    pointer-events: all;
-    opacity: 1;
-    transform: none;
-
-    
-}
-
-
-/* Calculator Input & Output */
-
-#calcInput {
-    margin: auto;
-    background-color: rgb(238, 235, 235);
-    border: solid 2px black;
-    width: 98.8%;
-    font-size: 18px;
-    height: 40px;
-}
-
-#calcInput:hover {
-    outline: none;
-    border: 3px solid #3e6cea;
-}
-
-#calcOutput {
-    background-color:rgb(238, 235, 235);
-    border: solid 2px black;
-    margin: auto;
-    margin-top: 5px;
-    width: 99.2%;
-    height: 45px;
-
-}
-
-#calcOutput:hover {
-    outline: none;
-    border: 3px solid #3e6cea;
-}
-

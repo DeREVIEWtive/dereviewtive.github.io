@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
 
+  <!-- Ownership verification -->
+  <meta name="google-site-verification" content="wDORwZevVqabFpiNgNYCSP_32ZTLej2lvIxxBlBMVMo"/>
 
-    <!------------Ownership verfication-->
-    <!--Google--><meta name="google-site-verification" content="wDORwZevVqabFpiNgNYCSP_32ZTLej2lvIxxBlBMVMo"/>
+  <title>DeREVIEWtive (WIP)</title>
 
-    <title>DeREVIEWtive (WIP)</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="styles/main.css" rel="stylesheet">
+  <!-- Math.js for symbolic computation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+
+  <!-- KaTeX for beautiful math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div id="sidebar">
-            <div id="icon">
-                <span><i class="fa-solid fa-list"></i></span>
-            </div>
-            <ul class="submenu">
-                <li class="subheader">Lessons</li>
-                <li><a href="/?lesson=what">What is Derivative?</a></li>
-                <li><a href="/?lesson=rules">Rules of Differentiation</a></li>
-                <li><a href="/?lesson=trigo">Trigonometric Functions</a></li>
-                <li><a href="/?lesson=higher">Higher Order of Derivatives</a></li>
-                <li><a href="/?lesson=implicit">Implicit Differentiation</a></li>
-                <li><a href="/?lesson=relared">Related Rates</a></li>
-                <li><a href="/?lesson=References">References</a></li>
-            </ul>
-        </div>
-        <h1><a href="/">DeREVIEWtive</a></h1>
-        <div id="navitem">
-            <a href="/calculator.html">Calculator</a>
-            <a href="/index.html">Home</a>
-            <a href="/faq.html">FAQ</a>
-            <a href="/about.html">About Us</a>
-        </div>
-    </nav>
-
-    <div id="content">
-        <div id="lessons">
-            <div class="header">Derivatives</div>
-            <div class="main">
-                <a href="/?lesson=what">What is Derivative?</a>
-                <a href="/?lesson=rules">Rules of Differentiation</a>
-                <a href="/?lesson=trigo">Trigonometric Functions</a>
-                <a href="/?lesson=higher">Higher Order of Derivatives</a>
-                <a href="/?lesson=implicit">Implicit Differentiation</a>
-                <a href="/?lesson=relared">Related Rates</a> 
-                <a href="/?lesson=References">References</a>
-            </div>  
-            </div>
-        <div id="info">
-            <div id="header" class="header">Loading...</div>
-            <main id="main" class="main"></main>
-        </div>
+  <nav>
+    <div id="sidebar">
+      <div id="icon">
+        <span><i class="fa-solid fa-list"></i></span>
+      </div>
+      <ul class="submenu">
+        <li class="subheader">Lessons</li>
+        <li><a href="/?lesson=what">What is Derivative?</a></li>
+        <li><a href="/?lesson=rules">Rules of Differentiation</a></li>
+        <li><a href="/?lesson=trigo">Trigonometric Functions</a></li>
+        <li><a href="/?lesson=higher">Higher Order of Derivatives</a></li>
+        <li><a href="/?lesson=implicit">Implicit Differentiation</a></li>
+        <li><a href="/?lesson=relared">Related Rates</a></li>
+        <li><a href="/?lesson=References">References</a></li>
+      </ul>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+    <h1><a href="/">DeREVIEWtive</a></h1>
 
-        <script src="calculator.js"></script>
+    <div id="navitem">
+      <a href="/index.html">Home</a>
+      <a href="/?page=calculator">Calculator</a>
+      <a href="/about.html">About Us</a>
     </div>
+  </nav>
+
+  <div id="content">
+    <div id="lessons">
+      <div class="header">Derivatives</div>
+      <div class="main">
+        <a href="/?lesson=what">What is Derivative?</a>
+        <a href="/?lesson=rules">Rules of Differentiation</a>
+        <a href="/?lesson=trigo">Trigonometric Functions</a>
+        <a href="/?lesson=higher">Higher Order of Derivatives</a>
+        <a href="/?lesson=implicit">Implicit Differentiation</a>
+        <a href="/?lesson=relared">Related Rates</a>
+        <a href="/?lesson=References">References</a>
+      </div>
+    </div>
+
+    <div id="info">
+      <div id="header" class="header">Loading...</div>
+      <main id="main" class="main"></main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+  <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
