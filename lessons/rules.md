@@ -1002,7 +1002,7 @@ It's now your turn to solve derivatives using the 8 aformentioned rules.
 
 <style>
 mi { 
-  font-size: 20 bpx;
+  font-size: 20px;
 }
 
 mn {

@@ -852,7 +852,7 @@ function loadCalculator() {
           <!-- Algebra Mode -->
           <div class="calculator-grid" id="algebra-grid">
             <button class="btn function" data-value="sqrt(">√</button>
-            <button class="btn function" data-value="abs(">□</button>
+            <button class="btn function" data-value="abs(">|x|</button>
             <button class="btn operator" data-value="<"><</button>
             <button class="btn" data-value="(">(</button>
             <button class="btn" data-value=")">)</button>
@@ -860,7 +860,7 @@ function loadCalculator() {
             <button class="btn clear">AC</button>
 
             <button class="btn function" data-value="^2">x²</button>
-            <button class="btn function" data-value="^(1/x)">|x|</button>
+            <button class="btn function" data-action="powerPrompt">□</button>
             <button class="btn operator" data-value="<=">≤</button>
             <button class="btn number" data-value="7">7</button>
             <button class="btn number" data-value="8">8</button>
