@@ -462,16 +462,17 @@ class MathSolver {
       const node = math.parse(cleaned);
       const rawDerivative = math.derivative(node, derivVar);
       const simplified = math.simplify(rawDerivative);
+      const expanded = math.expand(simplified); // Expand to prevent factoring
 
-      this.currentDerivative = simplified;
+      this.currentDerivative = expanded;
       this.derivativeOrder = 1;
       
       // Store first derivative
       this.allDerivatives = [{
         order: 1,
-        expression: simplified,
-        latex: this.toTexSafe(simplified),
-        text: simplified.toString(),
+        expression: expanded,
+        latex: this.toTexSafe(expanded),
+        text: expanded.toString(),
         variable: derivVar
       }];
 
@@ -497,20 +498,20 @@ class MathSolver {
         {
           title: "Step 3: Simplify",
           explanation: "Simplify the expression to a cleaner form:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(simplified)}`
+          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`
         },
         {
           title: "✓ Final Answer",
           explanation: "Derivative:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(simplified)}`,
+          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`,
           isFinal: true
         }
       ];
 
-      let latexOut = simplified.toTex();
+      let latexOut = expanded.toTex();
       latexOut = this.cleanLatex(latexOut);
 
-      const resultStr = simplified.toString();
+      const resultStr = expanded.toString();
       this.lastResult = resultStr;
 
       this.renderAllDerivatives();
@@ -615,6 +616,7 @@ class MathSolver {
 
     let dyNode = new math.OperatorNode('/', 'divide', [numeratorNode, denominatorNode]);
     dyNode = math.simplify(dyNode);
+    dyNode = math.expand(dyNode); // Expand to prevent factoring
 
     const texOptions = { implicit: 'hide' };
 
@@ -782,8 +784,9 @@ class MathSolver {
       const previousDerivative = this.currentDerivative;
       const nextDerivative = math.derivative(this.currentDerivative, derivVar);
       const nextSimplified = math.simplify(nextDerivative);
+      const nextExpanded = math.expand(nextSimplified); // Expand to prevent factoring
       
-      this.currentDerivative = nextSimplified;
+      this.currentDerivative = nextExpanded;
       this.derivativeOrder++;
 
       const orderSuperscript = this.derivativeOrder === 2 ? "''" : 
@@ -797,9 +800,9 @@ class MathSolver {
       // Add to allDerivatives array
       this.allDerivatives.push({
         order: this.derivativeOrder,
-        expression: nextSimplified,
-        latex: this.toTexSafe(nextSimplified),
-        text: nextSimplified.toString(),
+        expression: nextExpanded,
+        latex: this.toTexSafe(nextExpanded),
+        text: nextExpanded.toString(),
         variable: derivVar
       });
 
@@ -823,12 +826,12 @@ class MathSolver {
         {
           title: `Step 3: Simplify`,
           explanation: "Simplify the expression:",
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextSimplified)}`
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`
         },
         {
           title: `✓ ${orderText} Derivative Result`,
           explanation: `The ${orderText} derivative is:`,
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextSimplified)}`,
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`,
           isFinal: true
         }
       ];
@@ -836,10 +839,10 @@ class MathSolver {
       // Append new steps to existing steps
       this.currentSteps = [...this.currentSteps, ...newSteps];
 
-      let latex = nextSimplified.toTex();
+      let latex = nextExpanded.toTex();
       latex = this.cleanLatex(latex);
 
-      const resultStr = nextSimplified.toString();
+      const resultStr = nextExpanded.toString();
       this.lastResult = resultStr;
 
       // Update the Higher Derivative tab display
@@ -863,7 +866,7 @@ class MathSolver {
       this.addToCalculationHistory(`d^${this.derivativeOrder}/d${derivVar}^${this.derivativeOrder} (${this.originalExpression})`, resultStr);
       
       // Check if next derivative would be zero and hide button if so
-      if (nextSimplified.toString() === '0') {
+      if (nextExpanded.toString() === '0') {
         const getHigherBtn = document.getElementById('get-higher-btn');
         if (getHigherBtn) getHigherBtn.style.display = 'none';
       }
