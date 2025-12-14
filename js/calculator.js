@@ -603,6 +603,8 @@ class MathSolver {
     }
   }
 
+
+
   // ✅ Original correct computeImplicitDerivative method
   computeImplicitDerivative(leftNode, rightNode) {
     const dLdx = math.derivative(leftNode, 'x');
@@ -1002,3 +1004,4 @@ class MathSolver {
     else if (key === 'Backspace') { this.backspace(); e.preventDefault(); }
   }
 }
+
