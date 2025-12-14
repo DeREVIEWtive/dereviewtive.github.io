@@ -15,7 +15,10 @@ body {
   font-family: 'Times New Roman', Times, serif;
   overflow: clip;
   /* background: rgb(181, 181, 183); */
-  background: rgb(206, 203, 203);
+  /* background: rgb(206, 203, 203); */
+  background: rgb(194, 183, 219);
+
+
 }
 
 body.is-calculator #lessons {
@@ -202,7 +205,8 @@ nav a:not(#sidebar) {
 
 .main {
   /* background: rgb(214, 214, 214); */
-  background: rgb(226, 225, 225);
+  /* background: rgb(226, 225, 225); */
+  background: rgb(202, 198, 211);
   position: relative;
   height: 100%;
   overflow-wrap: break-word;

@@ -239,14 +239,6 @@ Doing the change of variables on this limit gives,
     </mfrac>
     <mover>
       <mo>=</mo>
-      <mrow>
-        <mi>let</mi>
-        <mspace width="0.5em" />
-        <mi>θ</mi>
-        <mo>=</mo>
-        <mn>6</mn>
-        <mi>x</mi>
-      </mrow>
     </mover>
     <mn>6</mn>
     <munder>
