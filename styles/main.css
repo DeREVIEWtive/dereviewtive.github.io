@@ -1,6 +1,7 @@
 * {
-  scrollbar-color: rgb(180, 180, 182) rgb(214, 214, 214);
+  scrollbar-color: rgb(156, 127, 217) rgb(202, 198, 211);
 }
+
 
 html, body {
   height: 100%;
@@ -256,3 +257,13 @@ nav a:not(#sidebar) {
     gap: 5px;
   }
 }
+
+msup > mn {
+  font-size: 13px !important;
+}
+
+msup mfrac mn {
+  font-size: 13px;
+}
+
+

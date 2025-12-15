@@ -860,7 +860,7 @@ function loadCalculator() {
             <button class="btn clear">AC</button>
 
             <button class="btn function" data-value="^2">x²</button>
-            <button class="btn function" data-action="powerPrompt">□</button>
+            <button class="btn function" data-value="^(1/x)">x⁻¹</button>
             <button class="btn operator" data-value="<=">≤</button>
             <button class="btn number" data-value="7">7</button>
             <button class="btn number" data-value="8">8</button>
@@ -918,7 +918,7 @@ function loadCalculator() {
             <button class="btn number" data-value="6">6</button>
             <button class="btn operator" data-value="*">×</button>
 
-            <button class="btn function" data-action="powerPrompt">□</button>
+            <button class="btn function" data-action="powerPrompt">x<sup style="font-size: 0.7em;">□</sup></button>
             <button class="btn function" data-value="^3">x³</button>
             <button class="btn constant" data-value="pi">π</button>
             <button class="btn number" data-value="1">1</button>
@@ -939,7 +939,7 @@ function loadCalculator() {
           <div class="calculator-grid hidden" id="calculus-grid">
             <button class="btn function" data-value="d/dx(">d/dx</button>
             <button class="btn constant" data-value="∞">∞</button>
-            <button class="btn function" data-action="powerPrompt">□</button>
+            <button class="btn function" data-action="powerPrompt">x<sup style="font-size: 0.7em;">□</sup></button>
             <button class="btn" data-value="(">(</button>
             <button class="btn" data-value=")">)</button>
             <button class="btn backspace">⌫</button>

@@ -84,6 +84,8 @@ There really isn’t a whole lot to this limit. In fact, it’s only here to con
       <mn>1</mn>
       <mn>6</mn>
     </mfrac>
+<br>
+<math display="block">
     <mrow>
     <munder>
       <mo>lim</mo>
@@ -108,12 +110,13 @@ There really isn’t a whole lot to this limit. In fact, it’s only here to con
     <mo stretchy="false">(</mo>
     <mn>1</mn>
     <mo stretchy="false">)</mo>
-    <mo>=</mo>
+     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
       <mn>6</mn>
     </mfrac>
 </math>
+</br>
 
 b) <math><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>sin</mi><mo stretchy="false">(</mo><mn>6</mn><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>x</mi></mfrac></math>
 
@@ -139,6 +142,8 @@ Now, in this case we can’t factor the 6 out of the sine so we’re stuck with 
       </mrow>
       <mi>x</mi>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <munder>
       <mo>lim</mo>
@@ -162,6 +167,8 @@ Now, in this case we can’t factor the 6 out of the sine so we’re stuck with 
         <mi>x</mi>
       </mrow>
     </mfrac>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mn>6</mn>
     <munder>
@@ -193,6 +200,7 @@ To see that we can use the fact on this limit let’s do a change of variables. 
 variables is really just a renaming of portions of the problem to make something look more like something we know how to deal with. They can’t always be done, but sometimes, such as this case, they can simplify the problem. 
 
 The change of variables here is to let <math><mi>θ</mi><mo>=</mo><mn>6</mn><mi>x</mi></math> and then notice that as <math><mi>x</mi><mo>→</mo><mn>0</mn></math> we also have <math><mi>θ</mi><mo>→</mo><mn>6</mn><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>. When doing a change of variables in a limit we need to change all the <math><mi>x</mi></math>’s into <math><mi>θ</mi></math>’s and that includes the one in the limit.
+
 Doing the change of variables on this limit gives,
 
 <math display="block">
@@ -214,6 +222,8 @@ Doing the change of variables on this limit gives,
       </mrow>
       <mi>x</mi>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mn>6</mn>
     <munder>
@@ -238,6 +248,8 @@ Doing the change of variables on this limit gives,
       </mrow>
     </mfrac>
     <mover>
+</math></br>
+<math display="block">
       <mo>=</mo>
     </mover>
     <mn>6</mn>
@@ -258,6 +270,8 @@ Doing the change of variables on this limit gives,
       </mrow>
       <mi>θ</mi>
     </mfrac>
+</math>
+<math display="block">
     <mo>=</mo>
     <mn>6</mn>
     <mo stretchy="false">(</mo>
@@ -292,7 +306,7 @@ In this case we appear to have a small problem in that the function we’re taki
         <mrow>
           <mi>sin</mi>
           <mo stretchy="false">(</mo>
-          <mn>7</mn>
+          <mn>7</mn>0
           <mi>x</mi>
           <mo stretchy="false">)</mo>
         </mrow>
@@ -322,6 +336,8 @@ and then all we need to do is recall a nice property of limits that allows us to
         <mo stretchy="false">)</mo>
       </mrow>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <munder>
       <mo>lim</mo>
@@ -344,6 +360,8 @@ and then all we need to do is recall a nice property of limits that allows us to
         <mi>x</mi>
       </mfrac>
     </mfrac>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mrow>
@@ -378,6 +396,8 @@ and then all we need to do is recall a nice property of limits that allows us to
         </mfrac>
       </mrow>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
@@ -402,7 +422,7 @@ and then all we need to do is recall a nice property of limits that allows us to
         </mfrac>
       </mrow>
     </mfrac>
-</math>
+</math></br>
 
 With a little rewriting we can see that we do in fact end up needing to do a limit like the one we did in the previous part. So, let’s do the limit here and this time we won’t bother with a change of variable to help us out. All we need to do is multiply the numerator and denominator of the fraction in the denominator by 7 to get things set up to use the fact. Here is the work for this limit.
 
@@ -425,6 +445,8 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
         <mo stretchy="false">)</mo>
       </mrow>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
@@ -453,6 +475,8 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
         </mfrac>
       </mrow>
     </mfrac>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
@@ -481,6 +505,8 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
         </mfrac>
       </mrow>
     </mfrac>
+</math>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
@@ -493,12 +519,14 @@ With a little rewriting we can see that we do in fact end up needing to do a lim
         <mo stretchy="false">)</mo>
       </mrow>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
       <mn>7</mn>
     </mfrac>
-</math>
+</math></br>
 
 Okay, now that we’ve gotten this set of limit examples out of the way let’s get back to the main point of this section, differentiating trig functions.
 
@@ -626,7 +654,9 @@ Doing this gives us,
       </mrow>
       <mi>h</mi>
     </mfrac>
-    <mo>=</mo>
+</math>
+<br><math display="block">
+<mo>=</mo>
     <munder>
       <mo>lim</mo>
       <mrow>
@@ -661,7 +691,9 @@ Doing this gives us,
       </mrow>
       <mi>h</mi>
     </mfrac>
-    <mo>=</mo>
+</math></br>
+<math display="block">
+<mo>=</mo>
     <munder>
       <mo>lim</mo>
       <mrow>
@@ -844,7 +876,10 @@ Differentiating cosine is done in a similar fashion. It will require a different
     <mo stretchy="false">)</mo>
 </math>
 
-With these two out of the way the remaining four are fairly simple to get. All the remaining four trig functions can be defined in terms of sine and cosine and these definitions, along with appropriate derivative rules, can be used to get their derivatives.
+With these two out of the way the remaining four are fairly simple to get. 
+
+All the remaining four trig functions can be defined in terms of sine and cosine and these definitions, along with appropriate derivative rules, can be used to get their derivatives.
+
 Let’s take a look at tangent. Tangent is defined as,
 
 <math display="block">
@@ -911,6 +946,8 @@ Now that we have the derivatives of sine and cosine all that we need to do is us
       </mfrac>
       <mo>)</mo>
     </mrow>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mrow>
@@ -947,6 +984,8 @@ Now that we have the derivatives of sine and cosine all that we need to do is us
         <mn>2</mn>
       </msup>
     </mfrac>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mrow>
@@ -1202,6 +1241,8 @@ There really isn’t a whole lot to this problem. We’ll just differentiate eac
     <mi>x</mi>
     <mo stretchy="false">)</mo>
     <mo stretchy="false">)</mo>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mn>3</mn>
     <mi>sec</mi>
@@ -1221,7 +1262,7 @@ There really isn’t a whole lot to this problem. We’ll just differentiate eac
     <mo stretchy="false">(</mo>
     <mi>x</mi>
     <mo stretchy="false">)</mo>
-</math>
+</math></br>
 
 b) <math><mi>h</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><msup><mi>w</mi><mrow><mo>−</mo><mn>4</mn></mrow></msup><mo>−</mo><msup><mi>w</mi><mn>2</mn></msup><mi>tan</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></math>
   
@@ -1271,6 +1312,8 @@ We will also need to be careful with the minus sign in front of the second term 
     <mi>w</mi>
     <mo stretchy="false">)</mo>
     <mo stretchy="false">)</mo>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mo>−</mo>
     <mn>12</mn>
@@ -1300,7 +1343,7 @@ We will also need to be careful with the minus sign in front of the second term 
     <mo stretchy="false">(</mo>
     <mi>w</mi>
     <mo stretchy="false">)</mo>
-</math>
+</math></br>
 
 Because the second term is being subtracted off of the first term then the whole derivative of the second term must also be subtracted off of the derivative of the first term. The parenthesis make this idea clear.
 
@@ -1391,6 +1434,8 @@ As with the previous part we’ll need to use the product rule on the first term
     <mo stretchy="false">(</mo>
     <mi>x</mi>
     <mo stretchy="false">)</mo>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mn>5</mn>
     <msup>
@@ -1419,7 +1464,7 @@ As with the previous part we’ll need to use the product rule on the first term
     <mo stretchy="false">(</mo>
     <mi>x</mi>
     <mo stretchy="false">)</mo>
-</math>
+</math></br>
 
 
 <style>

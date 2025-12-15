@@ -463,66 +463,23 @@ class MathSolver {
       const rawDerivative = math.derivative(node, derivVar);
       const simplified = math.simplify(rawDerivative);
       
-      console.log('Derivative calculation:', {
-        cleaned,
-        derivVar,
-        rawDerivative: rawDerivative ? rawDerivative.toString() : 'null',
-        simplified: simplified ? simplified.toString() : 'null'
-      });
-      
-      // Validate simplified result first
-      if (!simplified) {
-        console.error('Simplified is null or undefined');
-        throw new Error('Failed to compute derivative - simplified is null');
-      }
-      if (typeof simplified.toString !== 'function') {
-        console.error('Simplified does not have toString method');
-        throw new Error('Failed to compute derivative - invalid simplified object');
-      }
-      
-      // Try to expand only for polynomial-like expressions (safer)
-      let finalResult = simplified;
+      // Expand to prevent factoring (e.g., 8(x+1) becomes 8x+8)
+      let expanded = simplified;
       try {
-        const simplifiedStr = simplified.toString();
-        // Only expand if it looks like a polynomial (has +, -, *, ^ but no functions)
-        const hasNoFunctions = !/(sin|cos|tan|log|ln|sqrt|exp|abs|sec|csc|cot|arcsin|arccos|arctan)/i.test(simplifiedStr);
-        
-        if (hasNoFunctions) {
-          const expanded = math.expand(simplified);
-          // Validate expanded result
-          if (expanded && 
-              typeof expanded.toString === 'function' && 
-              expanded.toString() !== '' &&
-              expanded.toString() !== 'undefined' &&
-              !expanded.toString().includes('NaN')) {
-            finalResult = expanded;
-            console.log('Using expanded form:', finalResult.toString());
-          } else {
-            console.log('Expand produced invalid result, using simplified');
-          }
-        } else {
-          console.log('Has functions, skipping expand');
-        }
+        expanded = math.expand(simplified);
       } catch (e) {
-        // Expansion failed, use simplified form (this is fine)
-        console.log('Expansion error (using simplified):', e.message);
+        // If expand fails, use simplified (this is fine)
       }
 
-      // Safety check: ensure finalResult is valid
-      if (!finalResult || typeof finalResult.toString !== 'function') {
-        console.error('Invalid finalResult, using simplified as fallback');
-        finalResult = simplified;
-      }
-
-      this.currentDerivative = finalResult;
+      this.currentDerivative = expanded;
       this.derivativeOrder = 1;
       
       // Store first derivative
       this.allDerivatives = [{
         order: 1,
-        expression: finalResult,
-        latex: this.toTexSafe(finalResult),
-        text: finalResult.toString(),
+        expression: expanded,
+        latex: this.toTexSafe(expanded),
+        text: expanded.toString(),
         variable: derivVar
       }];
 
@@ -548,20 +505,20 @@ class MathSolver {
         {
           title: "Step 3: Simplify",
           explanation: "Simplify the expression to a cleaner form:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(finalResult)}`
+          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`
         },
         {
           title: "✓ Final Answer",
           explanation: "Derivative:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(finalResult)}`,
+          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`,
           isFinal: true
         }
       ];
 
-      let latexOut = finalResult.toTex();
+      let latexOut = expanded.toTex();
       latexOut = this.cleanLatex(latexOut);
 
-      const resultStr = finalResult.toString();
+      const resultStr = expanded.toString();
       this.lastResult = resultStr;
 
       this.renderAllDerivatives();
@@ -667,26 +624,11 @@ class MathSolver {
     let dyNode = new math.OperatorNode('/', 'divide', [numeratorNode, denominatorNode]);
     dyNode = math.simplify(dyNode);
     
-    // Try to expand only for polynomial-like expressions (safer)
+    // Expand to prevent factoring
     try {
-      const simplifiedStr = dyNode.toString();
-      // Only expand if it looks like a polynomial (has +, -, *, ^ but no functions)
-      const hasNoFunctions = !/(sin|cos|tan|log|ln|sqrt|exp|abs|sec|csc|cot|arcsin|arccos|arctan)/i.test(simplifiedStr);
-      
-      if (hasNoFunctions) {
-        const expanded = math.expand(dyNode);
-        // Validate expanded result
-        if (expanded && 
-            typeof expanded.toString === 'function' && 
-            expanded.toString() !== '' &&
-            expanded.toString() !== 'undefined' &&
-            !expanded.toString().includes('NaN')) {
-          dyNode = expanded;
-        }
-      }
+      dyNode = math.expand(dyNode);
     } catch (e) {
-      // Expansion failed, use simplified form (this is fine)
-      // No need to log - this is expected for non-polynomials
+      // If expand fails, use simplified (this is fine)
     }
 
     const texOptions = { implicit: 'hide' };
@@ -856,36 +798,15 @@ class MathSolver {
       const nextDerivative = math.derivative(this.currentDerivative, derivVar);
       const nextSimplified = math.simplify(nextDerivative);
       
-      // Try to expand only for polynomial-like expressions (safer)
-      let nextFinal = nextSimplified;
+      // Expand to prevent factoring
+      let nextExpanded = nextSimplified;
       try {
-        const simplifiedStr = nextSimplified.toString();
-        // Only expand if it looks like a polynomial (has +, -, *, ^ but no functions)
-        const hasNoFunctions = !/(sin|cos|tan|log|ln|sqrt|exp|abs|sec|csc|cot|arcsin|arccos|arctan)/i.test(simplifiedStr);
-        
-        if (hasNoFunctions) {
-          const nextExpanded = math.expand(nextSimplified);
-          // Validate expanded result
-          if (nextExpanded && 
-              typeof nextExpanded.toString === 'function' && 
-              nextExpanded.toString() !== '' &&
-              nextExpanded.toString() !== 'undefined' &&
-              !nextExpanded.toString().includes('NaN')) {
-            nextFinal = nextExpanded;
-          }
-        }
+        nextExpanded = math.expand(nextSimplified);
       } catch (e) {
-        // Expansion failed, use simplified form (this is fine)
-        // No need to log - this is expected for non-polynomials
+        // If expand fails, use simplified (this is fine)
       }
       
-      // Safety check: ensure nextFinal is valid
-      if (!nextFinal || typeof nextFinal.toString !== 'function') {
-        console.error('Invalid nextFinal, using simplified as fallback');
-        nextFinal = nextSimplified;
-      }
-      
-      this.currentDerivative = nextFinal;
+      this.currentDerivative = nextExpanded;
       this.derivativeOrder++;
 
       const orderSuperscript = this.derivativeOrder === 2 ? "''" : 
@@ -899,9 +820,9 @@ class MathSolver {
       // Add to allDerivatives array
       this.allDerivatives.push({
         order: this.derivativeOrder,
-        expression: nextFinal,
-        latex: this.toTexSafe(nextFinal),
-        text: nextFinal.toString(),
+        expression: nextExpanded,
+        latex: this.toTexSafe(nextExpanded),
+        text: nextExpanded.toString(),
         variable: derivVar
       });
 
@@ -925,12 +846,12 @@ class MathSolver {
         {
           title: `Step 3: Simplify`,
           explanation: "Simplify the expression:",
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextFinal)}`
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`
         },
         {
           title: `✓ ${orderText} Derivative Result`,
           explanation: `The ${orderText} derivative is:`,
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextFinal)}`,
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`,
           isFinal: true
         }
       ];
@@ -938,10 +859,10 @@ class MathSolver {
       // Append new steps to existing steps
       this.currentSteps = [...this.currentSteps, ...newSteps];
 
-      let latex = nextFinal.toTex();
+      let latex = nextExpanded.toTex();
       latex = this.cleanLatex(latex);
 
-      const resultStr = nextFinal.toString();
+      const resultStr = nextExpanded.toString();
       this.lastResult = resultStr;
 
       // Update the Higher Derivative tab display
@@ -965,7 +886,7 @@ class MathSolver {
       this.addToCalculationHistory(`d^${this.derivativeOrder}/d${derivVar}^${this.derivativeOrder} (${this.originalExpression})`, resultStr);
       
       // Check if next derivative would be zero and hide button if so
-      if (nextFinal.toString() === '0') {
+      if (nextExpanded.toString() === '0') {
         const getHigherBtn = document.getElementById('get-higher-btn');
         if (getHigherBtn) getHigherBtn.style.display = 'none';
       }

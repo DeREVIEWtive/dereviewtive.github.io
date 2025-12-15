@@ -41,7 +41,7 @@ This section introduces a collection of formulas and properties that will allow 
 
 In other words, to differentiate a sum or difference all we need to do is differentiate the individual terms and then put them back together with the appropriate signs. Note as well that this property is not limited to two functions.
 
-### Multiple Rule
+### Constant Multiple Rule
 Where <math><mi>c</mi></math> is any number.
 
 <math display="block">
@@ -71,6 +71,15 @@ Where <math><mi>c</mi></math> is any number.
 ### Derivative of a Constant Function
 If <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi></math> then <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>.The derivative of a constant is zero.
 
+### Example 1
+Differentiate the following function:
+<math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1,000</mn></math>
+
+### Solution
+This is a case where the given is a constant and therefore following the rule of the Derivative of a Constant Function is 0.
+
+<math><msup><mi>f</mi><mo>,</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></math>
+
 ### Power Rule
 If <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup></math> then <math><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>, where <math><mi>n</mi></math> is any number.
 
@@ -91,13 +100,13 @@ Differentiate the following function:
       <mn>11</mn>
       <msup>
         <mi>x</mi>
-        <mn>10</mn>
+        <m>10</mn>
       </msup>
       <mo>−</mo>
       <mn>6</mn>
       <msup>
         <mi>x</mi>
-        <mn>3</mn>
+        <m>3</mn>
       </msup>
       <mo>+</mo>
       <mn>10</mn>
@@ -116,7 +125,7 @@ In this case we have the sum and difference of four terms, so we will differenti
     <mo>−</mo>
     <mn>6</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>2</mn></msup>
     <mo>+</mo>
-    <mn>10</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><msup><mi>x</mi><mn>0</mn></msup>
+    <mn>10</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><msup><mi>x</mi><m>0</mn></msup>
     <mo>−</mo>
     <mn>0</mn>
 </math>
@@ -140,23 +149,18 @@ Differentiate the following function:
       <mn>8</mn>
       <msup><mi>z</mi><mn>3</mn></msup>
       <mo>−</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mrow>
-          <mn>3</mn>
-          <msup><mi>z</mi><mn>5</mn></msup>
-        </mrow>
-      </mfrac>
+      <mfrac><mn>1</mn><mn>3</mn></mfrac>
+      <msup><mi>z</mi><mrow><mo class="exponent">−</mo><mn class="exponent">5</mn></mrow></msup>
       <mo>+</mo>
       <mi>z</mi>
       <mo>−</mo>
       <mn>23</mn>
 </math>
-  
+
 ### Solution
 Now in this function the second term is not correctly set up for us to use the power rule. The power rule requires that the term be a variable to a power only and the term must be in the numerator. So, prior to differentiating we first need to rewrite the second term into a form that we can deal with.
 
-  <math display="block">
+<math display="block">
       <mi>y</mi>
       <mo>=</mo>
       <mn>8</mn>
@@ -178,7 +182,7 @@ Note that we left the 3 in the denominator and only moved the variable up to the
       <msup>
         <mrow>
           <mo stretchy="false">(</mo>
-          <mn>3</mn>
+          <m>3</mn>
           <mi>z</mi>
           <mo stretchy="false">)</mo>
         </mrow>
@@ -193,10 +197,10 @@ Now that we’ve gotten the function rewritten into a proper form that allows us
     <msup><mi>y</mi><mo>′</mo></msup>
     <mo>=</mo>
     <mn>24</mn>
-    <msup><mi>z</mi><mn>2</mn></msup>
+    <msup><mi>z</mi><m>2</mn></msup>
     <mo>+</mo>
     <mfrac><mn>5</mn><mn>3</mn></mfrac>
-    <msup><mi>z</mi><mrow><mo>−</mo><mn>6</mn></mrow></msup>
+    <msup><mi>z</mi><mrow><m>−</mo><m>6</mn></mrow></msup>
     <mo>+</mo>
     <mn>1</mn>
 </math>
@@ -237,7 +241,7 @@ Differentiate the following function:
       <mo>=</mo>
       <mroot>
         <msup><mi>x</mi><mn>2</mn></msup>
-        <mn>3</mn>
+        <m>3</mn>
       </mroot>
       <mo stretchy="false">(</mo>
       <mn>2</mn>
@@ -245,7 +249,7 @@ Differentiate the following function:
       <mo>−</mo>
       <msup>
         <mi>x</mi>
-        <mn>2</mn>
+        <m>2</mn>
       </msup>
       <mo stretchy="false">)</mo>
 </math>
@@ -259,8 +263,8 @@ Before computing the derivative, we should convert the radical to a fractional e
     <msup>
       <mi>x</mi>
       <mfrac>
-        <mn>2</mn>
-        <mn>3</mn>
+        <m>2</mn>
+        <m>3</mn>
       </mfrac>
     </msup>
     <mo stretchy="false">(</mo>
@@ -269,7 +273,7 @@ Before computing the derivative, we should convert the radical to a fractional e
     <mo>−</mo>
     <msup>
       <mi>x</mi>
-      <mn>2</mn>
+      <m>2</mn>
     </msup>
     <mo stretchy="false">)</mo>
 </math>
@@ -297,12 +301,12 @@ Now let’s take the derivative. So, we take the derivative of the first functio
       </mrow>
     </msup>
     <mo stretchy="false">(</mo>
-    <mn>2</mn>
+    <m>2</mn>
     <mi>x</mi>
     <mo>−</mo>
     <msup>
       <mi>x</mi>
-      <mn>2</mn>
+      <m>2</mn>
     </msup>
     <mo stretchy="false">)</mo>
     <mo>+</mo>
@@ -353,7 +357,7 @@ This is NOT what we got in the previous section for this derivative. However, wi
       </mfrac>
     </msup>
     <mo>+</mo>
-    <mn>2</mn>
+    <m>2</mn>
     <msup>
       <mi>x</mi>
       <mfrac>
@@ -1012,6 +1016,10 @@ mn {
 mo {
   font-size: 20px;
 }
+
+
+
+
 </style>
 
   
