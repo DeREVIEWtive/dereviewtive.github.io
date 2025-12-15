@@ -47,7 +47,7 @@ Now we don’t really want a relationship between the volume and the radius. Wha
 <math display="block"><msup><mi>V</mi><mo>′</mo></msup><mo>=</mo><mn>4</mn><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><msup><mi>r</mi><mo>′</mo></msup></math>
 Note that at this point we went ahead and dropped the <math><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math> from each of the terms. Now all that we need to do is plug in what we know and solve for what we want to find.
 
-<math display="block"><mn>5</mn><mo>=</mo><mn>4</mn><mi>π</mi><mo stretchy="false">(</mo><msup><mn>10</mn><mn>2</mn></msup><mo stretchy="false">)</mo><msup><mi>r</mi><mo>′</mo></msup><mspace width="1em" /><mo>⇒</mo><mspace width="1em" /><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>5</mn><mrow><mn>400</mn><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>80</mn><mi>π</mi></mrow></mfrac><mtext> cm/min</mtext></math>
+<math display="block"><mn>5</mn><mo>=</mo><mn>4</mn><mi>π</mi><mo stretchy="false">(</mo><msup><mi>10</mi><mn>2</mn></msup><mo stretchy="false">)</mo><msup><mi>r</mi><mo>′</mo></msup><mspace width="1em" /><mo>⇒</mo><mspace width="1em" /><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>5</mn><mrow><mn>400</mn><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>80</mn><mi>π</mi></mrow></mfrac><mtext> cm/min</mtext></math>
 We can get the units of the derivative by recalling that,
 <math display="block"><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mi>d</mi><mi>r</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>
 

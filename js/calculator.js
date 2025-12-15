@@ -407,6 +407,39 @@ class MathSolver {
     this.renderSteps();
   }
 
+  manualExpand(str) {
+    // Remove all spaces first
+    str = str.replace(/\s+/g, '');
+    
+    // Pattern: number * (expression)
+    // Example: "8*(x+1)" -> expand to "8*x+8*1" -> "8*x+8"
+    const pattern = /(\d+)\*\(([^)]+)\)/g;
+    
+    str = str.replace(pattern, (match, coef, inner) => {
+      // Split the inner expression by + and -
+      const terms = inner.split(/([+-])/);
+      const expanded = [];
+      
+      for (let i = 0; i < terms.length; i++) {
+        const term = terms[i].trim();
+        if (term === '+' || term === '-') {
+          expanded.push(term);
+        } else if (term) {
+          // Multiply coefficient with each term
+          if (term === '1') {
+            expanded.push(coef);
+          } else {
+            expanded.push(coef + '*' + term);
+          }
+        }
+      }
+      
+      return expanded.join('');
+    });
+    
+    return str;
+  }
+
   buildDerivativeTips(expr) {
     const tips = [];
     if (expr.includes('^')) tips.push("Power Rule: d/dx(x^n) = n·x^(n-1)");
@@ -461,25 +494,31 @@ class MathSolver {
 
       const node = math.parse(cleaned);
       const rawDerivative = math.derivative(node, derivVar);
-      const simplified = math.simplify(rawDerivative);
       
-      // Expand to prevent factoring (e.g., 8(x+1) becomes 8x+8)
-      let expanded = simplified;
+      // Get string representation and manually expand factored forms
+      let derivStr = rawDerivative.toString();
+      
+      // Manually expand patterns like "8 * (x + 1)" to "8 * x + 8"
+      derivStr = this.manualExpand(derivStr);
+      
+      // Parse the expanded string back to a node
+      let result;
       try {
-        expanded = math.expand(simplified);
+        result = math.parse(derivStr);
       } catch (e) {
-        // If expand fails, use simplified (this is fine)
+        // If parsing fails, use raw derivative
+        result = rawDerivative;
       }
 
-      this.currentDerivative = expanded;
+      this.currentDerivative = result;
       this.derivativeOrder = 1;
       
       // Store first derivative
       this.allDerivatives = [{
         order: 1,
-        expression: expanded,
-        latex: this.toTexSafe(expanded),
-        text: expanded.toString(),
+        expression: result,
+        latex: this.toTexSafe(result),
+        text: result.toString(),
         variable: derivVar
       }];
 
@@ -505,20 +544,20 @@ class MathSolver {
         {
           title: "Step 3: Simplify",
           explanation: "Simplify the expression to a cleaner form:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`
+          latex: `f'(${derivVar}) = ${this.toTexSafe(result)}`
         },
         {
           title: "✓ Final Answer",
           explanation: "Derivative:",
-          latex: `f'(${derivVar}) = ${this.toTexSafe(expanded)}`,
+          latex: `f'(${derivVar}) = ${this.toTexSafe(result)}`,
           isFinal: true
         }
       ];
 
-      let latexOut = expanded.toTex();
+      let latexOut = result.toTex();
       latexOut = this.cleanLatex(latexOut);
 
-      const resultStr = expanded.toString();
+      const resultStr = result.toString();
       this.lastResult = resultStr;
 
       this.renderAllDerivatives();
@@ -622,13 +661,16 @@ class MathSolver {
     const denominatorNode = new math.OperatorNode('-', 'subtract', [dLdy, dRdy]);
 
     let dyNode = new math.OperatorNode('/', 'divide', [numeratorNode, denominatorNode]);
-    dyNode = math.simplify(dyNode);
     
-    // Expand to prevent factoring
+    // Get string and manually expand
+    let dyStr = dyNode.toString();
+    dyStr = this.manualExpand(dyStr);
+    
+    // Parse back
     try {
-      dyNode = math.expand(dyNode);
+      dyNode = math.parse(dyStr);
     } catch (e) {
-      // If expand fails, use simplified (this is fine)
+      // If parsing fails, keep original
     }
 
     const texOptions = { implicit: 'hide' };
@@ -796,17 +838,20 @@ class MathSolver {
       // Calculate next derivative
       const previousDerivative = this.currentDerivative;
       const nextDerivative = math.derivative(this.currentDerivative, derivVar);
-      const nextSimplified = math.simplify(nextDerivative);
       
-      // Expand to prevent factoring
-      let nextExpanded = nextSimplified;
+      // Get string and manually expand
+      let derivStr = nextDerivative.toString();
+      derivStr = this.manualExpand(derivStr);
+      
+      // Parse back
+      let nextResult;
       try {
-        nextExpanded = math.expand(nextSimplified);
+        nextResult = math.parse(derivStr);
       } catch (e) {
-        // If expand fails, use simplified (this is fine)
+        nextResult = nextDerivative;
       }
       
-      this.currentDerivative = nextExpanded;
+      this.currentDerivative = nextResult;
       this.derivativeOrder++;
 
       const orderSuperscript = this.derivativeOrder === 2 ? "''" : 
@@ -820,9 +865,9 @@ class MathSolver {
       // Add to allDerivatives array
       this.allDerivatives.push({
         order: this.derivativeOrder,
-        expression: nextExpanded,
-        latex: this.toTexSafe(nextExpanded),
-        text: nextExpanded.toString(),
+        expression: nextResult,
+        latex: this.toTexSafe(nextResult),
+        text: nextResult.toString(),
         variable: derivVar
       });
 
@@ -846,12 +891,12 @@ class MathSolver {
         {
           title: `Step 3: Simplify`,
           explanation: "Simplify the expression:",
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextResult)}`
         },
         {
           title: `✓ ${orderText} Derivative Result`,
           explanation: `The ${orderText} derivative is:`,
-          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextExpanded)}`,
+          latex: `f${orderSuperscript}(${derivVar}) = ${this.toTexSafe(nextResult)}`,
           isFinal: true
         }
       ];
@@ -859,10 +904,10 @@ class MathSolver {
       // Append new steps to existing steps
       this.currentSteps = [...this.currentSteps, ...newSteps];
 
-      let latex = nextExpanded.toTex();
+      let latex = nextResult.toTex();
       latex = this.cleanLatex(latex);
 
-      const resultStr = nextExpanded.toString();
+      const resultStr = nextResult.toString();
       this.lastResult = resultStr;
 
       // Update the Higher Derivative tab display
@@ -886,7 +931,7 @@ class MathSolver {
       this.addToCalculationHistory(`d^${this.derivativeOrder}/d${derivVar}^${this.derivativeOrder} (${this.originalExpression})`, resultStr);
       
       // Check if next derivative would be zero and hide button if so
-      if (nextExpanded.toString() === '0') {
+      if (nextResult.toString() === '0') {
         const getHigherBtn = document.getElementById('get-higher-btn');
         if (getHigherBtn) getHigherBtn.style.display = 'none';
       }

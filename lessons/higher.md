@@ -221,8 +221,11 @@ The presence of parenthesis in the exponent denotes differentiation while the ab
 Collectively the second, third, fourth, etc. derivatives are called higher order derivatives.
 Let’s take a look at some examples of higher order derivatives.
 
-## Example 1: Find the first four derivatives for each of the following
+## Example 1
+Find the first four derivatives for each of the following
+
 a) <math><mi>R</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>8</mn><msup><mi>t</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>+</mo><msup><mi>e</mi><mi>t</mi></msup></math>
+
 ### Solution
 There really isn’t a lot to do here other than do the derivatives.
 
@@ -242,7 +245,10 @@ There really isn’t a lot to do here other than do the derivatives.
     <msup><mi>R</mi><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mfrac><mn>15</mn><mn>2</mn></mfrac><msup><mi>t</mi><mrow><mo>−</mo><mfrac><mn>7</mn><mn>2</mn></mfrac></mrow></msup><mo>+</mo><msup><mi>e</mi><mi>t</mi></msup>
 </math>
 
-Notice that differentiating an exponential function is very simple. It doesn’t change with each differentiation.
+Notice that differentiating an exponential function is very simple.
+
+It doesn’t change with each differentiation.
+
 b) <math><mi>y</mi><mo>=</mo><mi>cos</mi><mi>x</mi></math>
 
 ### Solution
@@ -253,12 +259,18 @@ Again, let’s just do some derivatives.
 <math display="block"><msup><mi>y</mi><mo>‴</mo></msup><mo>=</mo><mi>sin</mi><mi>x</mi></math>
 <math display="block"><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mi>cos</mi><mi>x</mi></math>
 
-Note that cosine (and sine) will repeat every four derivatives. The other four trig functions will not exhibit this behavior. You might want to take a few derivatives to convince yourself of this.
+Note that cosine (and sine) will repeat every four derivatives. 
+
+The other four trig functions will not exhibit this behavior. You might want to take a few derivatives to convince yourself of this.
 
 c) <math><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>sin</mi><mo stretchy="false">(</mo><mn>3</mn><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><mi>y</mi></mrow></msup><mo>+</mo><mi>ln</mi><mo stretchy="false">(</mo><mn>7</mn><mi>y</mi><mo stretchy="false">)</mo></math>
 
 ### Solution
-In the previous two examples we saw some patterns in the differentiation of exponential functions, cosines and sines. We need to be careful however since they only work if there is just a <math><mi>t</mi></math> or an <math><mi>x</mi></math> in the argument. This is the point of this example. In this example we will need to use the chain rule on each derivative.
+In the previous two examples we saw some patterns in the differentiation of exponential functions, cosines and sines. 
+
+We need to be careful however since they only work if there is just a <math><mi>t</mi></math> or an <math><mi>x</mi></math> in the argument. 
+
+This is the point of this example. In this example we will need to use the chain rule on each derivative.
 
 <math display="block">
     <msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo>

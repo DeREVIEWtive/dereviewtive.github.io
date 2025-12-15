@@ -40,7 +40,9 @@ This is the simple way of doing the problem. Just solve for <math><mi>y</mi></ma
 So, that’s easy enough to do. However, there are some functions for which this can’t be done. That’s where the second solution technique comes into play.
 
 Solution 2:
-In this case we’re going to leave the function in the form that we were given and work with it in that form. However, let’s recall from the first part of this solution that if we could solve for <math><mi>y</mi></math> then we will get <math><mi>y</mi></math> as a function of <math><mi>x</mi></math>. In other words, if we could solve for <math><mi>y</mi></math> (as we could in this case but won’t always be able to do) we get <math><mi>y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>. Let’s rewrite the equation to note this.
+In this case we’re going to leave the function in the form that we were given and work with it in that form. However, let’s recall from the first part of this solution that if we could solve for <math><mi>y</mi></math> then we will get <math><mi>y</mi></math> as a function of <math><mi>x</mi></math>
+
+In other words, if we could solve for <math><mi>y</mi></math> (as we could in this case but won’t always be able to do) we get <math><mi>y</mi><mo>=</mo><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math>. Let’s rewrite the equation to note this.
 
 <math display="block"><mi>x</mi><mi>y</mi><mo>=</mo><mi>x</mi><mi>y</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></math>
 
@@ -517,7 +519,7 @@ So, it’s now time to do our first problem where implicit differentiation is re
 ## Example 3
 <math display="block">
     <msup>
-      <mi>x</
+      <mi>x</mi>
       <mn>2</mn>
     </msup>
     <mo>+</mo>
@@ -560,7 +562,7 @@ So, in this example we really are going to need to do implicit differentiation s
     </mfrac>
     <mo stretchy="false">(</mo>
     <msup>
-      <mi>x</
+      <mi>x</mi>
       <mn>2</mn>
     </msup>
     <mo>+</mo>

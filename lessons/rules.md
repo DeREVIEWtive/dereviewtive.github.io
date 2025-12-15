@@ -1,7 +1,9 @@
 Rules of Differentiation
 
 # Derivative Properties and Formulas
-This section introduces a collection of formulas and properties that will allow us to avoid using the definition whenever possible to make things easier for us. Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
+This section introduces a collection of formulas and properties that will allow us to avoid using the definition whenever possible to make things easier for us. 
+
+Starting with the basic properties (only given in "prime" notation to make it simpler to understand.)
 ## Properties
 ### Sum/Difference Rule
 <math display="block">
@@ -139,7 +141,9 @@ In this case we have the sum and difference of four terms, so we will differenti
     <mn>10</mn>
 </math>
 
-Notice that in the third term the exponent was a one, and so upon subtracting 1 from the original exponent we get a new exponent of zero. Now recall that <math><msup><mi>x</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></math>. Don’t forget to do any basic arithmetic that needs to be done, such as any multiplication and/or division in the coefficients.
+Notice that in the third term the exponent was a one, and so upon subtracting 1 from the original exponent we get a new exponent of zero. 
+
+Now recall that <math><msup><mi>x</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></math>. Don’t forget to do any basic arithmetic that needs to be done, such as any multiplication and/or division in the coefficients.
 
 ### Example 2
 Differentiate the following function:
@@ -167,7 +171,7 @@ Now in this function the second term is not correctly set up for us to use the p
       <msup><mi>z</mi><mn>3</mn></msup>
       <mo>−</mo>
       <mfrac><mn>1</mn><mn>3</mn></mfrac>
-      <msup><mi>z</mi><mrow><mo>−</mo><mn>5</mn></mrow></msup>
+      <msup><mi>z</mi><mrow><mo class="exponent">−</mo><mn class="exponent">5</mn></mrow></msup>
       <mo>+</mo>
       <mi>z</mi>
       <mo>−</mo>
@@ -182,7 +186,7 @@ Note that we left the 3 in the denominator and only moved the variable up to the
       <msup>
         <mrow>
           <mo stretchy="false">(</mo>
-          <m>3</mn>
+          <mn>3</mn>
           <mi>z</mi>
           <mo stretchy="false">)</mo>
         </mrow>
@@ -624,6 +628,8 @@ Again, not much to do here other than use the quotient rule. Don’t forget to c
         <mn>2</mn>
       </msup>
     </mfrac>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mrow>
@@ -666,11 +672,13 @@ Again, not much to do here other than use the quotient rule. Don’t forget to c
           </msup>
           <mo>−</mo>
           <mn>2</mn>
-          <mo stretchy="false">
+          <mo stretchy="false">)</mo>
         </mrow>
         <mn>2</mn>
       </msup>
     </mfrac>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mrow>
@@ -713,7 +721,7 @@ Again, not much to do here other than use the quotient rule. Don’t forget to c
 </math>
 
 
-## Chain Rule
+### Chain Rule
 
 Suppose that we have two functions <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and <math><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math> and they are both differentiable. 
 
@@ -873,6 +881,8 @@ Using the chain rule, we get:
     <mo stretchy="false">(</mo>
     <mi>z</mi>
     <mo stretchy="false">)</mo>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <msup>
       <mi>f</mi>
@@ -886,6 +896,8 @@ Using the chain rule, we get:
     <mo stretchy="false">)</mo>
     <mo>⋅</mo>
     <mn>5</mn>
+</math></br>
+<math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>1</mn>
@@ -903,6 +915,8 @@ Using the chain rule, we get:
     </mfrac>
     <mo>⋅</mo>
     <mn>5</mn>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>5</mn>
@@ -918,7 +932,7 @@ Using the chain rule, we get:
         </msqrt>
       </mrow>
     </mfrac>
-</math>
+</math></br>
 
 A more intuitive way to remember the chain rule is to identify an "inside function" and an "outside function". Let’s rewrite the function from the example:
 
@@ -944,7 +958,9 @@ A more intuitive way to remember the chain rule is to identify an "inside functi
     </msup>
 </math>
 
-Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></math>, and theoutside function is raising that to the power of <math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>. The derivative is then:(derivative of the outside function, leaving the inside function alone) times(derivative of the inside function).
+Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></math>, and theoutside function is raising that to the power of <math><mfrac><mn>1</mn><mn>2</mn></mfrac></math>. 
+
+The derivative is then:(derivative of the outside function, leaving the inside function alone) times(derivative of the inside function).
 
 <math display="block">
     <msup>
@@ -986,7 +1002,9 @@ Here, the inside function is <math><mn>5</mn><mi>z</mi><mo>−</mo><mn>8</mn></m
     </mrow>
 </math>
 
-The outside function is always the last operation you would perform when evaluating. For instance, to find <math><mi>R</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></math>, you would first evaluate <math><mn>5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>−</mo><mn>8</mn></math> and then take the square root of the result. The square root is the last operation, making it the outside function.
+The outside function is always the last operation you would perform when evaluating. 
+
+For instance, to find <math><mi>R</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></math>, you would first evaluate <math><mn>5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>−</mo><mn>8</mn></math> and then take the square root of the result. The square root is the last operation, making it the outside function.
 
 
 ## Try to Solve
@@ -999,9 +1017,7 @@ It's now your turn to solve derivatives using the 8 aformentioned rules.
 5. <math><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>
 </mi><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mi>
 </mi></mrow><mrow><mn>2</mn><mo>-</mo><mn>1</mn></mrow></mfrac></math>
-6. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mi>
-</mi><mn>2</mn><mi>
-</mi><mo>+</mo><mn>3</mn><mi>x</mi><msup><mo stretchy="false">)</mo><mn>5</mn></msup></math>
+6. <math><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mi></mi><mo>+</mo><mn>3</mn><mi>x</mi><msup><mo stretchy="false">)</mo><mn>5</mn></msup></math>
 
 
 <style>
@@ -1017,7 +1033,9 @@ mo {
   font-size: 20px;
 }
 
-
+.exponent {
+  font-size: 13px !important;
+}
 
 
 </style>
