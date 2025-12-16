@@ -12,11 +12,8 @@ body {
   flex-direction: column;
   margin: 0px;
   padding: 0px;
-  /* font-family: Arial, Sans-serif; */
   font-family: 'Times New Roman', Times, serif;
   overflow: clip;
-  /* background: rgb(181, 181, 183); */
-  /* background: rgb(206, 203, 203); */
   background: rgb(194, 183, 219);
 
 

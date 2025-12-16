@@ -378,6 +378,8 @@ This is NOT what we got in the previous section for this derivative. However, wi
         <mn>3</mn>
       </mfrac>
     </msup>
+</math>
+<br><math display="block">
     <mo>=</mo>
     <mfrac>
       <mn>10</mn>
@@ -402,7 +404,7 @@ This is NOT what we got in the previous section for this derivative. However, wi
         <mn>3</mn>
       </mfrac>
     </msup>
-</math>
+</math></br>
 
 
 ### Quotient Rule

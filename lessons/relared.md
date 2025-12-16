@@ -29,6 +29,8 @@ We want to determine the rate at which the radius is changing. Again, rates are 
 <mi>t</mi>
 <mo stretchy="false">)</mo>
 <mo>=</mo>
+</math>
+<br><math display="block">
 <mfrac><mi>d</mi><mn>2</mn></mfrac>
 <mo>=</mo>
 <mn>10</mn>
@@ -47,8 +49,11 @@ Now we don’t really want a relationship between the volume and the radius. Wha
 <math display="block"><msup><mi>V</mi><mo>′</mo></msup><mo>=</mo><mn>4</mn><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup><msup><mi>r</mi><mo>′</mo></msup></math>
 Note that at this point we went ahead and dropped the <math><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math> from each of the terms. Now all that we need to do is plug in what we know and solve for what we want to find.
 
-<math display="block"><mn>5</mn><mo>=</mo><mn>4</mn><mi>π</mi><mo stretchy="false">(</mo><msup><mi>10</mi><mn>2</mn></msup><mo stretchy="false">)</mo><msup><mi>r</mi><mo>′</mo></msup><mspace width="1em" /><mo>⇒</mo><mspace width="1em" /><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>5</mn><mrow><mn>400</mn><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>80</mn><mi>π</mi></mrow></mfrac><mtext> cm/min</mtext></math>
+<math display="block"><mn>5</mn><mo>=</mo><mn>4</mn><mi>π</mi><mo stretchy="false">(</mo><msup><mi>10</mi><mn>2</mn></msup><mo stretchy="false">)</mo><msup><mi>r</mi><mo>′</mo></msup><mspace width="1em" /><mo>⇒</mo>
+<msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>5</mn><mrow><mn>400</mn><mi>π</mi></mrow></mfrac></math></br><math display="block"><mo>=</mo><mfrac><mn>1</mn><mrow><mn>80</mn><mi>π</mi></mrow></mfrac><mtext> cm/min</mtext></math>
+
 We can get the units of the derivative by recalling that,
+
 <math display="block"><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mi>d</mi><mi>r</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>
 
 The units of the derivative will be the units of the numerator (cm in the previous example) divided by the units of the denominator (min in the previous example). Let’s work some more examples.
@@ -58,7 +63,11 @@ A 15 foot ladder is resting against the wall. The bottom is initially 10 feet aw
 
 ### Solution
 
-The first thing to do in this case is to sketch picture that shows us what is going on. We’ve defined the distance of the bottom of the ladder from the wall to be <math><mi>x</mi></math> and the distance of the top of the ladder from the floor to be <math><mi>y</mi></math>. Note as well that these are changing with time and so we really should write <math><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math> and <math><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>.
+The first thing to do in this case is to sketch picture that shows us what is going on. We’ve defined the distance of the bottom of the ladder from the wall to be <math><mi>x</mi></math> and the distance of the top of the ladder from the floor to be <math><mi>y</mi></math>. 
+
+Note as well that these are changing with time and so we really should write,
+
+<math><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math> and <math><mi>y</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math>.
 
 However, as is often the case with related rates/implicit differentiation problems we don’t write the <math><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math> part just try to remember this in our heads as we proceed with the problem.
 
